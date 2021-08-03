@@ -3,3 +3,128 @@
 @import "constants";
 @import "mixins";
 @import "main";
+
+
+.container {
+  width: 1180px;
+  margin: 0 auto;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  background-color: #F3F3F3;
+}
+/*header-navigation*/
+.header {
+  width: 1850px;
+  margin: 0 auto;
+  &-navigation {
+    margin-left: 36px;
+    margin-right: 36px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navigation-list {
+  list-style: none;
+
+  color: #3D3D3D;
+  font-weight: 600;
+  line-height: 17px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: #3D3D3D;
+    &:visited {
+      color: #3D3D3D;
+
+    }
+  }
+
+}
+
+.button-partners {
+  width: 217px;
+  height: 46px;
+  background: #D5642A;
+  box-shadow: -10px 10px #CACBD9;
+}
+.partners-text {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+
+  margin-top: 12px;
+}
+/*end header-navigation*/
+
+/*main-section*/
+.main-section {
+  width: 1850px;
+  margin: 24px auto 0;
+  position: relative;
+
+  &-box {
+    background-image: url(../img/slaider1_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1180px;
+    height: 520px;
+
+    position: relative;
+  }
+  &-text {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 67px;
+    color: #272B70;
+    text-transform: uppercase;
+
+    background-color: #F3F3F3;
+    padding: 54px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 633px;
+  }
+
+}
+.main-zoom-menu {
+  list-style: none;
+  margin-left: 36px;
+  margin-top: 170px;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  a {
+    display: block;
+    margin-bottom: 41px;
+
+    font-weight: 600;
+    font-size: 14px;
+    color: #9E9E9E;
+
+    &:hover {
+      color: #D5642A;
+    }
+
+  }
+  .active {
+    color: #D5642A;
+  }
+}
