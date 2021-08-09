@@ -13,37 +13,82 @@
 
 </head>
 <body>
-<div class="button-up-wrapper">
-  <a href="#" class="button-up-text"><img src="img/button-up.svg" alt="button-up">Вернуться наверх</a>
-</div>
-<header class="header">
-  <nav class="header-navigation">
-    <div class="logo-wrapper">
-      <a href="#"><img src="img/logo.svg" alt="logo"></a>
-    </div>
-    <div class="tabs-wrapper-header">
-      <div class="tabs navigation-list">
-        <a href="#section-with-tabs-id" class="tab link-navigation">zoom Relax</a>
-        <a href="#section-with-tabs-id" class="tab link-navigation">zoom Reader M</a>
-        <a href="#section-with-tabs-id" class="tab link-navigation">zoom Multifocus</a>
-        <a href="#section-with-tabs-id" class="tab link-navigation">zoom Bifocal B-free</a>
-        <a href="#section-with-tabs-id" class="tab link-navigation">zoom Standard+</a>
+<div class="burger-wrapper burger-wrapper-js">
+  <div class="burger-overlay burger-overlay-js"></div>
+  <div class="burger-box">
+    <div class="burger-title">
+      <div>
+        <img src="img/burger-logo.svg" alt="logo" class="burger-logo">
       </div>
+      <div>
+        <button class="burger-close-button burger-close-button-js"><img src="img/close.svg" alt="close"></button>
+      </div>
+    </div>
+    <div class="burger-menu-main-wrapper">
+      <ul class="burger-menu-content">
+        <li><a class="link-navigation" href="#about">О НАС</a></li>
+        <li><a class="link-navigation" href="#company">О КОМПАНИИ</a></li>
+        <li><a class="link-navigation" href="#laboratory">ЛАБОРАТОРИЯ</a></li>
+        <li><a class="link-lens-wrapper link-lens-js" href="#"><span class="link-lens">ЛИНЗЫ </span><img src="img/lens_arrow.svg" alt="lens-arrow"></a></li>
+        <li><a class="link-navigation" href="#advantages">ПРЕИМУЩЕСТВА</a></li>
+      </ul>
+    </div>
+    <div class="burger-menu-more-wrapper">
+      <div class="button-back-wrapper">
+        <a class="button-back button-back-js"><img src="img/arrow-back.svg" alt="arrow-back"><span class="button-back-content">назад в меню</span></a>
+      </div>
+      <h3 class="burger-menu-more-title">линзы</h3>
+        <div class="burger-menu-content">
+          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Relax</a>
+          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Reader M</a>
+          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Multifocus</a>
+          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Bifocal B-free</a>
+          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Standard+</a>
 
+        </div>
     </div>
-    <div class="button-partners">
-      <a class="partners-text">ПАРТНЁРАМ</a>
-    </div>
-  </nav>
+  </div>
+
+</div>
+
+<div class="button-up-wrapper button-up-wrapper-js to-up-js">
+  <a href="#" class="button-up-box"><img src="img/button-up.svg" alt="button-up" class="button-up-img-color"><img src="img/button-up-white.svg" alt="button-up" class="button-up-img-white"><span class="button-up-content">Вернуться <br>наверх</span></a>
+</div>
+<header class="header-wrapper">
+  <div class="header">
+    <nav class="header-navigation">
+      <div class="logo-wrapper">
+        <a href="#" class="to-up-js"><img src="img/logo.svg" alt="logo"></a>
+      </div>
+      <div class="tabs-wrapper-header">
+        <div class="tabs navigation-list">
+          <a href="#section-with-tabs-id" class="tab link-navigation"><span class="animation-roll-wrapper"><span data-hover="zoom Relax">zoom Relax</span></span></a>
+          <a href="#section-with-tabs-id" class="tab link-navigation"><span class="animation-roll-wrapper"><span data-hover="zoom Reader M">zoom Reader M</span></span></a>
+          <a href="#section-with-tabs-id" class="tab link-navigation"><span class="animation-roll-wrapper"><span data-hover="zoom Multifocus">zoom Multifocus</span></span></a>
+          <a href="#section-with-tabs-id" class="tab link-navigation"><span class="animation-roll-wrapper"><span data-hover="zoom Bifocal B-free">zoom Bifocal B-free</span></span></a>
+          <a href="#section-with-tabs-id" class="tab link-navigation"><span class="animation-roll-wrapper"><span data-hover="zoom Standard+">zoom Standard+</span></span></a>
+        </div>
+
+      </div>
+      <div class="button-partners-wrapper">
+        <a class="button-partners">ПАРТНЁРАМ</a>
+      </div>
+      <div class="burger-button-wrapper">
+        <button class="burger-button burger-button-js">
+          <img src="img/burger-img.svg" alt="burger-img" class="burger-img">
+        </button>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <main class="main">
   <div class="main-section">
     <ul class="main-zoom-menu">
-      <li><a class="link-navigation" href="#about">О НАС</a></li>
-      <li><a class="link-navigation" href="#company">О КОМПАНИИ</a></li>
-      <li><a class="link-navigation" href="#laboratory">ЛАБОРАТОРИЯ</a></li>
-      <li><a class="link-navigation" href="#advantages">ПРЕИМУЩЕСТВА</a></li>
+      <li><a class="link-navigation" href="#about"><span class="animation-roll-wrapper"><span data-hover="О НАС">О НАС</span></span></a></li>
+      <li><a class="link-navigation" href="#company"><span class="animation-roll-wrapper"><span data-hover="О КОМПАНИИ">О КОМПАНИИ</span></span></a></li>
+      <li><a class="link-navigation" href="#laboratory"><span class="animation-roll-wrapper"><span data-hover="ЛАБОРАТОРИЯ">ЛАБОРАТОРИЯ</span></span></a></li>
+      <li><a class="link-navigation" href="#advantages"><span class="animation-roll-wrapper"><span data-hover="ПРЕИМУЩЕСТВА">ПРЕИМУЩЕСТВА</span></span></a></li>
     </ul>
     <div id="about" class="main-section-container">
       <div class="js-main-slider">
@@ -72,7 +117,7 @@
         </div><!--main-section-box end-->
         <div class="main-section-box">
 
-          <img src="img/zoom-logo-color.svg" alt="zoom-logo" class="main-section-zoom-logo">
+          <img src="img/zoom-logo-white.svg" alt="zoom-logo" class="main-section-zoom-logo">
           <img src="img/slider3.jpg" alt="slaider3-img">
           <div class="main-section-text-wrapper">
             <div class="main-section-description">
@@ -88,7 +133,14 @@
   </div> <!--main section end-->
 
   <div id="company" class="section-about section-bc">
-    <div class="section-about-container js-second-slider">
+    <div class="section-about-container js-second-slider mcs-horizontal">
+      <div class="section-about-card">
+        <p class="section-about-card-header1">Zoom</p>
+        <p class="section-about-card-header2">Relax</p>
+        <img src="img/relax.jpg" alt="reader-img">
+        <p class="section-about-card-description">Современная альтернатива обычным однофокальным линзам  для пользователей 20-40 лет. Помогают снизить напряжение на глаза. Подходят активным пользователям гаджетов.</p>
+
+      </div><!--section-about-card end-->
       <div class="section-about-card">
         <p class="section-about-card-header1">Zoom</p>
         <p class="section-about-card-header2">Reader M</p>
@@ -148,7 +200,6 @@
 
     </div><!--container end-->
     <div class="container">
-      <!--    <div id="section-production-id" class="section-production-more-information-wrapper">-->
       <div id="section-production-id" class="hidden" data-content-id="section-production">
         <div class="section-production-more-information-wrapper">
           <div class="section-production-more-information-left-col">
@@ -176,7 +227,11 @@
       <!--кнопка подробнее-->
       <div class="section-production-button-more-wrapper">
         <div class="button-more-wrapper">
-          <button type="button" class="button-more" data-content="section-production"><span class="button-more-label">Подробнее</span><img src="img/button_more.svg" alt="button-more" class="button-more-img"></button>
+          <button type="button" class="button-more" data-content="section-production">
+            <span class="button-more-label">
+              <span class="animation-roll-wrapper"><span data-hover="Подробнее">Подробнее</span></span>
+            </span><img src="img/button_more.svg" alt="button-more" class="button-more-img">
+          </button>
         </div>
       </div>
       <!--кнопка подробнее end-->
@@ -225,16 +280,15 @@
   <!--<div class="section-with-tabs">-->
   <div class="section-with-tabs" id="section-with-tabs-id">
     <div class="tabs-wrapper">
-
       <div class="tabs">
+        <button class="btn-dropdown btn-dropdown-js"><span class="btn-dropdown-content btn-dropdown-content-js">relax</span><img src="img/arrow-down.svg" alt="arrow" class="btn-dropdown-img"></button>
         <div class="container tabs-main">
-          <a href="#section-with-tabs-id" class="tab link-navigation active">zoom Relax</a>
-          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Reader M</a>
-          <a href="#section-with-tabs-id" class="tab  link-navigation">zoom Multifocus</a>
-          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Bifocal B-free</a>
-          <a href="#section-with-tabs-id" class="tab link-navigation">zoom Standard+</a>
+          <a href="#section-with-tabs-id" class="tab link-navigation active tab-dropdown"><span class="animation-roll-wrapper"><span data-hover="zoom Relax">zoom Relax</span></span></a>
+          <a href="#section-with-tabs-id" class="tab link-navigation tab-dropdown"><span class="animation-roll-wrapper"><span data-hover="zoom Reader M">zoom Reader M</span></span></a>
+          <a href="#section-with-tabs-id" class="tab  link-navigation tab-dropdown"><span class="animation-roll-wrapper"><span data-hover="zoom Multifocus">zoom Multifocus</span></span></a>
+          <a href="#section-with-tabs-id" class="tab link-navigation tab-dropdown"><span class="animation-roll-wrapper"><span data-hover="zoom Bifocal B-free">zoom Bifocal B-free</span></span></a>
+          <a href="#section-with-tabs-id" class="tab link-navigation tab-dropdown"><span class="animation-roll-wrapper"><span data-hover="zoom Standard+">zoom Standard+</span></span></a>
         </div>
-
       </div>
       <div class="tabs-content">
         <div class="tab-item">
@@ -279,6 +333,7 @@
                     <p class="section-more-information-text">Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.
                     </p>
                     <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
+                    <img src="img/zoom_section_reader_more.jpg" alt="zoom-section-more">
                     <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
                     <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
                     <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
@@ -291,7 +346,7 @@
                 <!--кнопка подробнее-->
                 <div class="section-production-button-more-wrapper">
                   <div class="button-more-wrapper">
-                    <button type="button" data-content="content-relax" class="button-more"><span class="button-more-label">Подробнее</span><img src="img/button_more.svg" alt="button-more"></button>
+                    <button type="button" data-content="content-relax" class="button-more"><span class="button-more-label"><span class="animation-roll-wrapper"><span data-hover="Подробнее">Подробнее</span></span></span><img src="img/button_more.svg" alt="button-more" class="button-more-img"></button>
                   </div>
                 </div>
                 <!--кнопка подробнее end-->
@@ -375,6 +430,7 @@
                     <p class="section-more-information-text">Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.
                     </p>
                     <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
+                    <img src="img/zoom_section_reader_more.jpg" alt="zoom-section-more">
                     <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
                     <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
                     <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
@@ -387,7 +443,7 @@
                 <!--кнопка подробнее-->
                 <div class="section-production-button-more-wrapper">
                   <div class="button-more-wrapper">
-                    <button type="button" class="button-more" data-content="content-reader"><span class="button-more-label">Подробнее</span><img src="img/button_more.svg" alt="button-more"></button>
+                    <button type="button" class="button-more" data-content="content-reader"><span class="button-more-label"><span class="animation-roll-wrapper"><span data-hover="Подробнее">Подробнее</span></span></span><img src="img/button_more.svg" alt="button-more" class="button-more-img"></button>
                   </div>
                 </div>
                 <!--кнопка подробнее end-->
@@ -402,7 +458,7 @@
               <div class="section-get-right-col">
                 <h3 class="title-main-smaller-font">Что вы получаете:</h3>
                 <ul class="section-get-list">
-                  <li class="section-get-list-item">Быстрая адаптация к новым очкам, благодаря учёту индивидуальных параметров++++++++++++++</li>
+                  <li class="section-get-list-item">Быстрая адаптация к новым очкам, благодаря учёту индивидуальных параметров</li>
                   <li class="section-get-list-item">Мягкое регулирование четкости зрения на всех дистанциях</li>
                   <li class="section-get-list-item">Без расплывающихся зон и искажений на периферии линзы</li>
                   <li class="section-get-list-item">Эстетика без прибавления возраста (в отличие от обычных бифокальных линз)</li>
@@ -420,13 +476,13 @@
 
               <h3 class="title">ZOOM Multifocus</h3>
               <div class="title-main-and-information"><!--main-title-and-information end-->
-                <h2 class="title-main section-left-col-reader">Больше, чем просто очки для чтения</h2>
+                <h2 class="title-main section-left-col-reader">Видеть всё, видеть как раньше</h2>
                 <div class="section-right-col">
                   <p class="text-description">
-                    Переутомление глаз часто начинает проявляться усталостью, головной болью, болью в шее и спине. Как правило, эти симптомы являются следствием длительной работы за компьютером.
+                    C возрастом наше зрение изменяется. Становится сложнее различать мелкий шрифт или время на наручных часах. После 45 лет хрусталик глаза теряет прежнюю эластичность. Глазам всё сложнее переключаться между дальней и ближней зрительными зонами. Эту проблему можно скорректировать благодаря современным технологиям производства рецептурных очковых линз. Идеальное решение при возрастной пресбиопии – прогрессивные линзы, способные избавить вас от необходимости постоянно менять очки.
                   </p>
                   <p class="text-description">
-                    Проблема может усугубляться необходимостью частого перемещения взгляда, например, с документов на столе или экрана компьютера на коллегу или клиента.
+                    Эту проблему можно скорректировать благодаря современным технологиям производства рецептурных очковых линз. Идеальное решение при возрастной пресбиопии – прогрессивные линзы, способные избавить вас от необходимости постоянно менять очки.
                   </p>
                 </div><!--title-main-and-information-right-col end-->
 
@@ -437,12 +493,12 @@
                   <img src="img/zoom-section-multifocus.jpg" alt="multifocus">
                 </div><!--section-img-wrapper end-->
                 <h2 class="title-main-smaller-font section-title-main">
-                  Линзы <span class="zoom-name-lens">ZOOM Reader M</span> решают проблему начинающих пресбиопов при работе в офисе или дома.</h2>
+                  Линзы <span class="zoom-name-lens">ZOOM Multifocus</span> обеспечивают четкое зрение вблизи, вдаль и на средних дистанциях без скачков и искажений </h2>
                 <p class="text-description">
-                  Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.
+                  При производстве этих линз мы учитываем множество параметров владельцев: зрительные привычки, образ жизни и анатомические данные. Ведь чем больше конструкция рецептурных линз будет учитывать индивидуальные параметры владельца, тем быстрее и легче пройдёт адаптация к вашим новым очкам.
                 </p>
                 <p class="text-description">
-                  Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.
+                  В зависимости от того, как вы проводите большую часть дня – за рабочим столом или на улице – поля зрения для ближней, средней и дальней дистанции будут различаться.
                 </p>
               </div><!--section-container end-->
             </div><!--section-relax-container end-->
@@ -453,6 +509,7 @@
                   <p class="section-more-information-text">Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.
                   </p>
                   <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
+                  <img src="img/zoom_section_reader_more.jpg" alt="zoom-section-more">
                   <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
                   <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
                   <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
@@ -466,7 +523,7 @@
                 <!--кнопка подробнее-->
                 <div class="section-production-button-more-wrapper">
                   <div class="button-more-wrapper">
-                    <button type="button" class="button-more" data-content="content-multifocus"><span class="button-more-label">Подробнее</span><img src="img/button_more.svg" alt="button-more"></button>
+                    <button type="button" class="button-more" data-content="content-multifocus"><span class="button-more-label"><span class="animation-roll-wrapper"><span data-hover="Подробнее">Подробнее</span></span></span><img src="img/button_more.svg" alt="button-more" class="button-more-img"></button>
                   </div>
                 </div>
                 <!--кнопка подробнее end-->
@@ -482,7 +539,7 @@
                 <h3 class="title-main-smaller-font">Что вы получаете:</h3>
                 <ul class="section-get-list">
                   <li class="section-get-list-item">Быстрая адаптация к новым очкам, благодаря учёту индивидуальных параметров</li>
-                  <li class="section-get-list-item">М---------------------ягкое регулирование четкости зрения на всех дистанциях</li>
+                  <li class="section-get-list-item">Мягкое регулирование четкости зрения на всех дистанциях</li>
                   <li class="section-get-list-item">Без расплывающихся зон и искажений на периферии линзы</li>
                   <li class="section-get-list-item">Эстетика без прибавления возраста (в отличие от обычных бифокальных линз)</li>
                 </ul>
@@ -499,13 +556,13 @@
 
               <h3 class="title">ZOOM Bifocal B-free</h3>
               <div class="title-main-and-information"><!--main-title-and-information end-->
-                <h2 class="title-main section-left-col-reader">Больше, чем просто очки для чтения</h2>
+                <h2 class="title-main section-left-col-reader">Бифокальные линзы с невидимым сегментом</h2>
                 <div class="section-right-col">
                   <p class="text-description">
-                    Переутомление глаз часто начинает проявляться усталостью, головной болью, болью в шее и спине. Как правило, эти симптомы являются следствием длительной работы за компьютером.
+                    Линзы ZOOM Bifocal B-free – ещё один вариант коррекции возрастной дальнозоркости (пресбиопии). Очки с такими линзами позволяют обеспечивать четкое зрение на разные расстояния – вблизи и вдаль.
                   </p>
                   <p class="text-description">
-                    Проблема может усугубляться необходимостью частого перемещения взгляда, например, с документов на столе или экрана компьютера на коллегу или клиента.
+                    Линзы удобны тем, что заменяют две пары очков, заключая в себе сразу две оптические зоны.
                   </p>
                 </div><!--title-main-and-information-right-col end-->
 
@@ -516,19 +573,20 @@
                   <img src="img/zoom-section-bifocal.jpg" alt="bifocal">
                 </div><!--section-img-wrapper end-->
                 <h2 class="title-main-smaller-font section-title-main">
-                  Линзы <span class="zoom-name-lens">ZOOM Reader M</span> решают проблему начинающих пресбиопов при работе в офисе или дома.</h2>
+                  ZOOM <span class="zoom-name-lens">Bifocal B-free</span> производятся в уникальном дизайне Freeform, в котором разница между оптическими зонами практически незаметна и поверхность линзы остается однородной.</h2>
                 <p class="text-description">
-                  Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.
+                  Благодаря инновационной технологии производства, линза получается абсолютно гладкой, без резких переходов между оптическими зонами. А это значит, что в отличии от обычных бифокальных линз, Bifocal B-free не будут заметны на лице и не прибавят возраста своему владельцу.
                 </p>
               </div><!--section-container end-->
             </div><!--section-relax-container end-->
             <div class="section-container">
               <div class="hidden" data-content-id="content-bifocal">
-                <img src="img/zoom-section-reader.jpg" alt="zoom-section-more">
+                <img src="img/zoom_section_reader.jpg" alt="zoom-section-more">
                 <div class="section-more-information">
                   <p class="section-more-information-text">Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.
                   </p>
                   <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
+                  <img src="img/zoom_section_reader_more.jpg" alt="zoom-section-more">
                   <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
                   <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
                   <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
@@ -543,7 +601,7 @@
                 <!--кнопка подробнее-->
                 <div class="section-production-button-more-wrapper">
                   <div class="button-more-wrapper">
-                    <button type="button" class="button-more" data-content="content-bifocal"><span class="button-more-label">Подробнее</span><img src="img/button_more.svg" alt="button-more"></button>
+                    <button type="button" class="button-more" data-content="content-bifocal"><span class="button-more-label"><span class="animation-roll-wrapper"><span data-hover="Подробнее">Подробнее</span></span></span><img src="img/button_more.svg" alt="button-more" class="button-more-img"></button>
                   </div>
                 </div>
                 <!--кнопка подробнее end-->
@@ -624,6 +682,7 @@
                     <p class="section-more-information-text">Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.
                     </p>
                     <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
+                    <img src="img/zoom_section_reader_more.jpg" alt="zoom-section-more">
                     <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
                     <p class="section-more-information-text">Линзы ZOOM Reader M идеально подходят для занятия вашим хобби, например, рукоделия, просмотра телевизора, готовки, общения в интернете или игры на музыкальном инструменте.</p>
                     <p class="section-more-information-text">Они незаменимы для выполнения любых задач на близком и среднем расстоянии. Ношение таких линз может замедлить прогрессирование пресбиопии.Не важно, программист вы или косметолог, работник офиса или домохозяйка, линзы ZOOM Reader M позволят вам лучше видеть, а вашим глазам – меньше уставать в течении дня.</p>
@@ -638,7 +697,7 @@
                 <!--кнопка подробнее-->
                 <div class="section-production-button-more-wrapper">
                   <div class="button-more-wrapper">
-                    <button type="button" class="button-more" data-content="content-standard"><span class="button-more-label">Подробнее</span><img src="img/button_more.svg" alt="button-more"></button>
+                    <button type="button" class="button-more" data-content="content-standard"><span class="button-more-label"><span class="animation-roll-wrapper"><span data-hover="Подробнее">Подробнее</span></span></span><img src="img/button_more.svg" alt="button-more" class="button-more-img"></button>
                   </div>
                 </div>
                 <!--кнопка подробнее end-->
@@ -666,7 +725,6 @@
         </div><!-- item end-->
       </div>
     </div>
-
   </div>
   <!--</div>-->
 
@@ -767,16 +825,16 @@
 <footer class="footer">
   <div class="footer-container container">
     <div class="footer-lab-logo">
-      <img src="img/logo.svg" alt="logo-lab">
+      <a href="#" class="to-up-js"><img src="img/logo.svg" alt="logo-lab"></a>
     </div>
 
     <div id="contacts" class="footer-row">
       <ul class="footer-zoom-menu">
-        <li><a class="link-navigation" href="#about">О НАС</a></li>
-        <li><a class="link-navigation" href="#company">О КОМПАНИИ</a></li>
-        <li><a class="link-navigation" href="#laboratory">ЛАБОРАТОРИЯ</a></li>
-        <li><a class="link-navigation" href="#advantages">ПРЕИМУЩЕСТВА</a></li>
-        <li><a class="link-navigation" href="#contacts">КОНТАКТЫ</a></li>
+        <li><a class="link-navigation" href="#about"><span class="animation-roll-wrapper"><span data-hover="О НАС">О НАС</span></span></a></li>
+        <li><a class="link-navigation" href="#company"><span class="animation-roll-wrapper"><span data-hover="О КОМПАНИИ">О КОМПАНИИ</span></span></a></li>
+        <li><a class="link-navigation" href="#laboratory"><span class="animation-roll-wrapper"><span data-hover="ЛАБОРАТОРИЯ">ЛАБОРАТОРИЯ</span></span></a></li>
+        <li><a class="link-navigation" href="#advantages"><span class="animation-roll-wrapper"><span data-hover="ПРЕИМУЩЕСТВА">ПРЕИМУЩЕСТВА</span></span></a></li>
+        <li><a class="link-navigation" href="#contacts"><span class="animation-roll-wrapper"><span data-hover="КОНТАКТЫ">КОНТАКТЫ</span></span></a></li>
       </ul>
 
       <ul class="footer-right-col">
