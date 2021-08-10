@@ -2,82 +2,28 @@ $(document).ready(function () {
     $('.js-main-slider').slick({
         dots: true
     });
-/**************************************************************/
-  // debounce from underscore.js
- function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
 
- // use x and y mousewheel event data to navigate flickity
- function slick_handle_wheel_event(e, slick_instance, slick_is_animating) {
-  // do not trigger a slide change if another is being animated
-  if (!slick_is_animating) {
-    // pick the larger of the two delta magnitudes (x or y) to determine nav direction
-    var direction =
-      Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-
-    console.log("wheel scroll ", e.deltaX, e.deltaY, direction);
-
-    if (direction > 0) {
-      // next slide
-      slick_instance.slick("slickNext");
-    } else {
-      // prev slide
-      slick_instance.slick("slickPrev");
-    }
-  }
-}
-
- // debounce the wheel event handling since trackpads can have a lot of inertia
- var slick_handle_wheel_event_debounced = debounce(
- slick_handle_wheel_event
- , 1000, true
- );
-/************************************************/
-
+    const slideNumbers = $('.section-about-card').length;
+    const slideWidth = $('.section-about-card').outerWidth();
+    const sliderWidth = $('.js-second-slider').outerWidth();
 
     $('.js-second-slider').slick({
         arrows: false,
         speed: 300,
         infinite: false,
-        slidesToShow: 1,
-        // centerMode: true,
-        variableWidth: true,
-        // swipeToSlide: true,
-        // slidesToScroll: 1,
-        // autoplay: true,
-    });
+        variableWidth: true
+    }).on('wheel', (function(e) {
+        const currentSlide = $('.js-second-slider').slick('slickCurrentSlide');
+         if (e.originalEvent.deltaY < 0 && currentSlide !== 0) {
+            e.preventDefault();
+            $(this).slick('slickPrev');
+        } else if (e.originalEvent.deltaY > 0 && ((slideNumbers - currentSlide) * slideWidth > sliderWidth)) {
 
+            e.preventDefault();
+            $(this).slick('slickNext');
+        }
+    }));
 
-/*************************************************************/
-    var slick_2_is_animating = false;
-
-    $('.js-second-slider').on("afterChange", function(index) {
-        console.log("Slide after change " + index);
-        slick_2_is_animating = false;
-    });
-
-    $('.js-second-slider').on("beforeChange", function(index) {
-        console.log("Slide before change " + index);
-        slick_2_is_animating = true;
-    });
-
-    $('.js-second-slider').on("wheel", function(e) {
-        slick_handle_wheel_event_debounced(e.originalEvent, $('.js-second-slider'), slick_2_is_animating);
-    });
-
-   /********************************************************/
     $('.to-up-js').click(function () {
         $('body, html').animate({
             scrollTop: 0

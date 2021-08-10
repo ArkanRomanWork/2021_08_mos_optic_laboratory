@@ -66,7 +66,7 @@ $screen-xs: 375px;
 $screen-sm: 375px;
 $screen-md: 768px;
 $screen-lg: 1024px;
-$screen-xl: 1920px;
+$screen-xl: 1900px;
 
 /* Create the mixin (usually in a separate .scss file) */
 @mixin max-screen($media) {
