@@ -1608,7 +1608,6 @@ body {
 }
 
 @media (max-width: 1919px) {
-  /* между 1920 и 1400 */
   .header .logo-wrapper {
     width: 120px;
   }
@@ -1652,7 +1651,6 @@ body {
   }
 }
 @media (max-width: 1400px) {
-  /* тот что на 1024 */
   .container {
     width: 944px;
   }
@@ -2356,7 +2354,6 @@ body {
   .section-footer .title-main-smaller-font {
     font-size: 30px;
     line-height: 36px;
-    /* or 38px */
   }
   .section-footer .text-description {
     font-size: 18px;
@@ -2551,7 +2548,6 @@ body {
   }
 
   /*section-advantages end */
-  /* тот что на 768 */
 }
 @media (max-width: 767px) {
   .parallax {

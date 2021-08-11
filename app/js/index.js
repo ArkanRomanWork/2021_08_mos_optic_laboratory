@@ -1,8 +1,9 @@
 $(document).ready(function () {
+    //первый слайдер
     $('.js-main-slider').slick({
         dots: true
     });
-
+//слайдер с карточками
     const slideNumbers = $('.section-about-card').length;
     const slideWidth = $('.section-about-card').outerWidth();
     const sliderWidth = $('.js-second-slider').outerWidth();
@@ -23,38 +24,25 @@ $(document).ready(function () {
             $(this).slick('slickNext');
         }
     }));
-
+//скролл наверх
     $('.to-up-js').click(function () {
         $('body, html').animate({
             scrollTop: 0
         }, 1000);
     });
 
+//видимость кнопки наеверх
     $(window).scroll(function() {
-        // если пользователь прокрутил страницу более чем на 200px
         if ($(this).scrollTop()>200) {
-            // то сделать кнопку scrollup видимой
             $('.button-up-wrapper-js').fadeIn();
         }
-        // иначе скрыть кнопку scrollup
         else {
             $('.button-up-wrapper-js').fadeOut();
         }
     });
-
-
-
-    // $(window).on("scroll", function() {
-    //     var scrollPos = $(window).scrollTop();
-    //     if (scrollPos >= 250) {
-    //         $('.button-up-wrapper-js').fadeIn();
-    //     } else {
-    //         $('.button-up-wrapper-js').fadeOut();
-    //     }
-    // });
+    //скрол ссылки
     $('.link-navigation').on('click', function (e) {
         e.preventDefault();
-
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 1000);
@@ -62,8 +50,7 @@ $(document).ready(function () {
 
     });
 
-
-    // let ths = $(this);
+//функционал табов
     $('.tab-item').not(':first').hide();
     $('.tab').click(function() {
         $('.tab').removeClass('active');
@@ -71,17 +58,11 @@ $(document).ready(function () {
         $('.btn-dropdown-content-js').text($(this).text());
         $('.tabs-main').removeClass('dropdown-flex');
         $('.btn-dropdown-img').removeClass('btn-dropdown-img-up');
-
         $('.tab-item').hide().eq($(this).index()).fadeIn();
     });
-
-
-
-
 });
-
+//кнопка подробнее
 const buttonMore = document.querySelectorAll('.button-more');
-
 buttonMore.forEach((oneButton) => {
     oneButton.addEventListener('click', function()  {
         this.classList.toggle('active-button')
@@ -89,7 +70,6 @@ buttonMore.forEach((oneButton) => {
         const blockContent = document.querySelector(`[data-content-id = "${dataButton}"]`);
         blockContent.classList.toggle("visible");
     });
-
 });
 
 const btnBurger = document.querySelector('.burger-button-js');
@@ -103,28 +83,31 @@ const burgerBack = document.querySelector('.button-back-js');
 const btnDropdown = document.querySelector('.btn-dropdown');
 const menuDropdown = document.querySelector('.tabs-main');
 const btnDropdownImg = document.querySelector('.btn-dropdown-img');
+//показ бургер меню
 btnBurger.addEventListener('click', () => {
     burgerMenuMore.classList.remove("burger-visible-block");
     burgerMenuMain.classList.remove("burger-hidden");
     burgerMenuBox.classList.add("burger-visible");
 });
-
+//закрытие бургер меню
 burgerOverlay.addEventListener('click', () => {
     burgerMenuBox.classList.remove("burger-visible");
 });
 burgerClose.addEventListener('click', () => {
     burgerMenuBox.classList.remove("burger-visible");
 });
+//скрытое меню в бургере
 burgerMenuLens.addEventListener('click', () => {
     burgerMenuMore.classList.add("burger-visible-block");
     burgerMenuMain.classList.add("burger-hidden");
 });
+//бургер кнопка назад
 burgerBack.addEventListener('click', () => {
     burgerMenuMore.classList.remove("burger-visible-block");
     burgerMenuMain.classList.remove("burger-hidden");
 });
+//
 btnDropdown.addEventListener('click', () => {
-    // menuDropdown.classList.remove("dropdown-flex");
     menuDropdown.classList.toggle('dropdown-flex');
     btnDropdownImg.classList.toggle('btn-dropdown-img-up');
 });
@@ -133,7 +116,6 @@ btnDropdown.addEventListener('click', () => {
 let prevScrollPos = window.pageYOffset;
 const btnUp = document.querySelector('.button-up-wrapper-js');
 const header = document.querySelector('.header-wrapper');
-
 
 window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
