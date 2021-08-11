@@ -139,10 +139,10 @@ window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollPos > currentScrollPos) {
         btnUp.style.bottom = "-200px";
-        header.style.top = "-200px";
+        header.style.top = "0";
     } else {
         btnUp.style.bottom = "10px";
-        header.style.top = "0";
+        header.style.top = "-200px";
     }
     prevScrollPos = currentScrollPos;
 }

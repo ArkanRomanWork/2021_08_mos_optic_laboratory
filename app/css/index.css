@@ -541,7 +541,7 @@ body {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  z-index: 10;
+  z-index: 5000;
   background-color: rgba(196, 196, 196, 0.2);
   border-radius: 10px;
   padding: 15px 25px;
@@ -590,16 +590,14 @@ body {
 
 /*header-navigation*/
 .header {
-  width: 1850px;
+  max-width: 1850px;
   margin: 0 auto;
 }
 .header-wrapper {
   background-color: #F3F3F3;
+  padding: 0 30px;
 }
 .header-navigation {
-  margin-left: 36px;
-  margin-right: 36px;
-  margin-top: 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -623,10 +621,9 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -653,7 +650,7 @@ body {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 0 95px;
+  padding: 0 70px;
 }
 
 .button-partners {
@@ -663,7 +660,7 @@ body {
   line-height: 22px;
   color: #fff;
   text-align: center;
-  padding: 12px 65px;
+  padding: 12px 50px;
   background: #D5642A;
   -webkit-box-shadow: -10px 10px #CACBD9;
           box-shadow: -10px 10px #CACBD9;
@@ -689,8 +686,7 @@ body {
   position: relative;
 }
 .main-section-container {
-  width: 1180px;
-  margin: 0 auto;
+  padding: 0 340px;
 }
 .main-section-box {
   position: relative;
@@ -772,7 +768,7 @@ body {
 .js-main-slider .slick-dots {
   list-style-type: none;
   position: absolute;
-  bottom: 260px;
+  top: 525px;
   left: 0;
   z-index: 4;
 }
@@ -780,8 +776,8 @@ body {
   font-size: 0;
   line-height: 0;
   display: block;
-  width: 80px;
-  height: 10px;
+  width: 53px;
+  height: 6px;
   cursor: pointer;
   color: transparent;
   border: 0;
@@ -808,7 +804,6 @@ body {
 
 .main-zoom-menu {
   list-style: none;
-  margin-left: 36px;
   margin-top: 0;
   position: absolute;
   top: 170px;
@@ -1024,6 +1019,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
 }
 .button-more:hover {
   cursor: pointer;
@@ -1053,6 +1049,7 @@ body {
 .section-warranty {
   padding-top: 160px;
   padding-bottom: 160px;
+  background-color: #F3F3F3;
 }
 .section-warranty-container {
   display: -webkit-box;
@@ -1086,7 +1083,7 @@ body {
   margin-bottom: 45px;
 }
 .section-warranty-text-description-wrapper {
-  margin-top: 55px;
+  margin-top: 84px;
   width: 75%;
 }
 
@@ -1144,6 +1141,9 @@ body {
   margin: 0 auto;
   position: relative;
 }
+.zoom-men-img-wrapper-main {
+  background-color: #F3F3F3;
+}
 
 .zoom-logo-for-men {
   position: absolute;
@@ -1163,6 +1163,9 @@ body {
           justify-content: space-between;
 }
 
+.section-with-tabs {
+  background-color: #F3F3F3;
+}
 .section-container {
   width: 719px;
   margin: 0 auto;
@@ -1191,6 +1194,7 @@ body {
 }
 .section-title-main {
   margin-bottom: 39px;
+  line-height: 44px;
 }
 .section-footer {
   display: -webkit-box;
@@ -1213,6 +1217,7 @@ body {
 .section-footer-right-col {
   margin-left: 120px;
   width: 50%;
+  line-height: 43px;
 }
 .section-footer-right-col-reader {
   width: 50%;
@@ -1244,7 +1249,7 @@ body {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  margin-top: 78px;
+  margin-top: 60px;
 }
 
 .btn-dropdown {
@@ -1365,6 +1370,7 @@ body {
 /*section-cover*/
 .section-cover {
   padding-top: 101px;
+  background-color: #F3F3F3;
 }
 .section-cover-row {
   display: -webkit-box;
@@ -1403,7 +1409,7 @@ body {
 .section-advantages {
   background-color: #ECECEC;
   padding-top: 442px;
-  padding-bottom: 140px;
+  padding-bottom: 70px;
 }
 .section-advantages .title-main {
   width: 50%;
@@ -1441,7 +1447,7 @@ body {
 }
 
 .clients-photo-wrapper {
-  margin-bottom: -255px;
+  margin-bottom: -290px;
 }
 
 /*section-advantages end*/
@@ -1579,45 +1585,47 @@ body {
           transform: none;
 }
 
-@media (max-width: 1920px) {
+.parallax {
+  min-height: 900px;
+}
+.parallax-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.parallax-body {
+  position: fixed;
+  width: 100%;
+  top: 86px;
+  left: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 1000;
+}
+
+@media (max-width: 1919px) {
   /* между 1920 и 1400 */
-  .header {
-    width: 1400px;
-  }
-  .header-navigation {
-    margin-left: 0;
-    margin-right: 0;
-  }
   .header .logo-wrapper {
     width: 120px;
-    padding-right: 20px;
   }
   .header .tabs-wrapper-header {
     padding: 0 0;
-    margin-right: 15px;
   }
 
   .button-partners {
     font-size: 10px;
     line-height: 12px;
-    padding: 12px 20px;
+    padding: 12px 29px;
     -webkit-box-shadow: -5px 5px #CACBD9;
             box-shadow: -5px 5px #CACBD9;
   }
 
-  .main-zoom-menu {
-    margin-left: 0;
-    margin-top: 0;
-    top: 185px;
-    left: 0;
-  }
-  .main-zoom-menu a {
-    margin-bottom: 26px;
-    font-size: 10px;
-  }
-
   .js-main-slider .slick-dots {
-    bottom: 262px;
+    top: 500px;
   }
   .js-main-slider .slick-dots li button {
     width: 50px;
@@ -1636,7 +1644,11 @@ body {
     max-width: 1400px;
   }
   .main-section-container {
-    width: 1180px;
+    padding: 0 150px;
+  }
+  .main-section-header {
+    font-size: 36px;
+    line-height: 50px;
   }
 }
 @media (max-width: 1400px) {
@@ -1645,16 +1657,13 @@ body {
     width: 944px;
   }
 
-  .header {
-    width: 980px;
+  .parallax {
+    min-height: 596px;
   }
-  .header .logo-wrapper {
-    width: 120px;
+  .parallax-body {
+    top: 80px;
   }
 
-  .navigation-list {
-    margin-left: 29px;
-  }
   .navigation-list a {
     font-size: 10px;
     line-height: 12px;
@@ -1667,10 +1676,16 @@ body {
   .main-zoom-menu {
     top: 110px;
     left: 36px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .main-zoom-menu a {
+    margin-bottom: 26px;
+    font-size: 10px;
   }
 
   .js-main-slider .slick-dots {
-    bottom: 167px;
+    top: 335px;
   }
   .js-main-slider .slick-next:after {
     top: 100px;
@@ -1681,9 +1696,6 @@ body {
 
   .main-section {
     max-width: 1024px;
-  }
-  .main-section-container {
-    width: 688px;
   }
   .main-section-description {
     font-size: 14px;
@@ -1755,6 +1767,9 @@ body {
     line-height: 34px;
     margin-right: -45px;
   }
+  .section-production-text {
+    padding-top: 41px;
+  }
   .section-production-button-more-wrapper {
     padding-top: 0;
     margin-top: -50px;
@@ -1792,6 +1807,7 @@ body {
   }
   .section-warranty-text-description-wrapper {
     width: 95%;
+    margin-top: 55px;
   }
   .section-warranty .zoom-logo {
     width: 72px;
@@ -1817,10 +1833,12 @@ body {
     right: 60px;
   }
 
+  .section-footer {
+    margin-top: 52px;
+  }
   .section-footer .title-main-smaller-font {
     font-size: 32px;
     line-height: 38px;
-    /* or 38px */
   }
   .section-container {
     width: 522px;
@@ -1852,6 +1870,15 @@ body {
   }
   .section-zoom-logo-standard {
     width: 54px;
+  }
+  .section-left-col {
+    padding-right: 10px;
+  }
+  .section-img-wrapper {
+    margin-bottom: 35px;
+  }
+  .section-title-main {
+    margin-bottom: 35px;
   }
 
   .tabs-main a {
@@ -1888,7 +1915,12 @@ body {
   }
 
   .zoom-logo-line-wrapper {
-    margin-top: 81px;
+    margin-top: 45px;
+    margin-bottom: 44px;
+  }
+
+  .clients-photo-wrapper {
+    margin-bottom: -219px;
   }
 
   /*section-cover end*/
@@ -1914,7 +1946,14 @@ body {
 
   /*section-advantages end*/
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
+  .parallax {
+    min-height: 700px;
+  }
+  .parallax-body {
+    top: 55px;
+  }
+
   .tabs-wrapper-header {
     display: none;
   }
@@ -2065,7 +2104,7 @@ body {
     border-bottom: none;
   }
   .burger-visible {
-    z-index: 1000;
+    z-index: 2000;
     opacity: 1;
   }
   .burger-visible .burger-box {
@@ -2076,6 +2115,10 @@ body {
   }
   .burger-hidden {
     display: none;
+  }
+
+  .parallax-header {
+    z-index: 1500;
   }
 
   .main-zoom-menu {
@@ -2093,10 +2136,9 @@ body {
     padding-top: 10px;
   }
   .header-wrapper {
-    position: -webkit-sticky;
-    position: sticky;
+    position: relative;
+    padding: 0;
     top: 0;
-    z-index: 100;
     -webkit-transition: all 0.15s;
     -o-transition: all 0.15s;
     transition: all 0.15s;
@@ -2115,6 +2157,8 @@ body {
 
   .main-section-container {
     width: 728px;
+    margin: 0 auto;
+    padding: 0 0;
   }
   .main-section-text-wrapper {
     display: -webkit-box;
@@ -2159,8 +2203,8 @@ body {
   }
 
   .js-main-slider .slick-dots {
-    top: 55%;
-    left: 35%;
+    top: 350px;
+    left: 250px;
     bottom: 0;
   }
   .js-main-slider .slick-prev:after, .js-main-slider .slick-next:after {
@@ -2261,12 +2305,20 @@ body {
   .section-warranty-right-col {
     width: 55%;
   }
+  .section-warranty-right-col-text {
+    margin-top: 25px;
+    margin-bottom: 49px;
+  }
   .section-warranty-text-description-wrapper {
     width: 100%;
   }
   .section-warranty .zoom-logo {
     width: 62px;
     top: 30px;
+  }
+
+  .zoom-card-img-wrapper {
+    margin-top: 45px;
   }
 
   /*section-warranty end*/
@@ -2297,11 +2349,9 @@ body {
     font-size: 18px;
     line-height: 26px;
   }
-  .section .section-button-more-wrapper {
-    margin-top: 0;
-  }
   .section-footer {
     margin-bottom: 0;
+    margin-top: 21px;
   }
   .section-footer .title-main-smaller-font {
     font-size: 30px;
@@ -2321,6 +2371,9 @@ body {
   .section-with-tabs .title-main-and-information .title-main {
     font-size: 30px;
     line-height: 36px;
+  }
+  .section-with-tabs .section-button-more-wrapper {
+    margin-top: 0;
   }
   .section-zoom-logo {
     width: 65px;
@@ -2481,6 +2534,7 @@ body {
   /*section-cover end*/
   /*section-advantages*/
   .section-advantages {
+    padding-top: 307px;
     background-color: #F3F3F3;
   }
   .section-advantages .title-main {
@@ -2499,8 +2553,14 @@ body {
   /*section-advantages end */
   /* тот что на 768 */
 }
-@media (max-width: 768px) {
-  /* тот что на 375 */
+@media (max-width: 767px) {
+  .parallax {
+    min-height: 500px;
+  }
+  .parallax-body {
+    top: 47px;
+  }
+
   .button-up-wrapper {
     position: fixed;
     right: 0;
@@ -2543,14 +2603,16 @@ body {
   .header {
     width: 375px;
     padding-bottom: 16px;
+    padding-left: 5px;
+  }
+  .header-wrapper {
+    padding: 0;
+    margin: 0 auto;
   }
   .header .logo-wrapper {
     width: 112px;
   }
 
-  .main-section {
-    max-width: 375px;
-  }
   .main-section-container {
     width: 375px;
   }
@@ -2580,8 +2642,8 @@ body {
   }
 
   .js-main-slider .slick-dots {
-    top: 36%;
-    left: 20%;
+    top: 185px;
+    left: 70px;
   }
   .js-main-slider .slick-dots li {
     margin-right: 30px;
@@ -2732,16 +2794,19 @@ body {
     width: 100%;
     padding-bottom: 15px;
   }
+  .section-warranty .title {
+    padding-bottom: 14px;
+  }
   .section-warranty .title-main-smaller-font {
     font-size: 18px;
     line-height: 22px;
-    /* or 22px */
   }
 
   /*section-warranty end*/
   /*instance block*/
   .block-instance-wrapper {
     padding: 33px 35px;
+    margin-left: 25px;
   }
   .block-instance-text {
     font-weight: normal;
@@ -2782,13 +2847,19 @@ body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 37px;
+    margin-bottom: 12px;
   }
   .section-main-wrapper .title-main-and-information .title-main {
     font-size: 24px;
     line-height: 29px;
     padding-top: 25px;
     padding-bottom: 23px;
+  }
+  .section-main-wrapper .text-description {
+    padding-bottom: 15px;
+  }
+  .section-title-main {
+    margin-bottom: 28px;
   }
   .section-left-col {
     width: 100%;
@@ -2833,10 +2904,11 @@ body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 24px;
+    margin-top: 9px;
   }
   .section-footer-left-col {
     width: 100%;
+    margin-bottom: 29px;
   }
   .section-footer-left-col-reader {
     width: 100%;
@@ -2871,7 +2943,7 @@ body {
   }
 
   .tabs-main {
-    margin-left: -187px;
+    margin-left: -177px;
   }
 
   /*section-with-tabs end*/
@@ -2917,7 +2989,7 @@ body {
 
   /*section-advantages*/
   .section-advantages {
-    padding-top: 300px;
+    padding-top: 285px;
   }
   .section-advantages .title {
     padding-bottom: 19px;
@@ -2941,6 +3013,7 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 49px;
   }
   .section-advantages-card-wrapper {
     margin-top: 35px;
