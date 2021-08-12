@@ -235,7 +235,7 @@ body {
   .slick-dots {
     list-style-type: none;
     position: absolute;
-    top: 525px;
+    top: 533px;
     left: 0;
     z-index: 4;
 
@@ -418,23 +418,123 @@ body {
 }
 
 /*section-production*/
+//.section-production {
+//  padding-top: 180px;
+//  padding-bottom: 130px;
+//  background-color: #ECECEC;
+//
+//  &-container {
+//    display: flex;
+//  }
+//
+//  &-content {
+//    width: 41%;
+//  }
+//
+//  &-images {
+//    display: flex;
+//    width: 59%;
+//
+//    &-first {
+//      width: 280px;
+//      padding-left: 20px;
+//      padding-bottom: 20px;
+//    }
+//
+//    &-second {
+//      width: 380px;
+//    }
+//
+//    &-third {
+//      width: 200px;
+//      padding-bottom: 20px;
+//    }
+//
+//    &-fourth {
+//      width: 280px;
+//    }
+//
+//    &-left-column {
+//      display: flex;
+//      flex-direction: column;
+//      align-items: flex-end;
+//      padding-right: 20px;
+//    }
+//
+//    &-right-column {
+//      display: flex;
+//      flex-direction: column;
+//      justify-content: flex-end;
+//    }
+//  }
+//
+//  &-text {
+//    padding-top: 57px;
+//    padding-bottom: 24px;
+//
+//    &-wrapper {
+//      padding-right: 50px;
+//    }
+//  }
+//
+//  &-button-more-wrapper {
+//    padding-top: 15px;
+//  }
+//
+//  .title-main {
+//    margin-right: -106px;
+//  }
+//
+//  &-more-information {
+//
+//    &-wrapper{
+//      display: flex;
+//    }
+//
+//    &-left-col {
+//      width: 50%;
+//    }
+//
+//    &-right-col {
+//      width: 50%;
+//      padding-left: 40px;
+//    }
+//
+//    &-img {
+//      margin-top: 30px;
+//    }
+//  }
+//}
+
+
+/**/
 .section-production {
   padding-top: 180px;
   padding-bottom: 130px;
   background-color: #ECECEC;
 
-  &-container {
-    display: flex;
+  &-title {
+    float: left;
+    width: 42%;
   }
+  .title-main {
+    margin-bottom: 50px;
+  }
+  //&-container {
+  //  display: flex;
+  //}
 
-  &-content {
-    width: 41%;
-  }
+  //&-content {
+  //  width: 41%;
+  //}
 
   &-images {
     display: flex;
-    width: 59%;
-
+    //width: 59%;
+    &-wrap {
+      float: right;
+      width: 58%;
+    }
     &-first {
       width: 280px;
       padding-left: 20px;
@@ -506,6 +606,7 @@ body {
   }
 }
 
+/**/
 #section-production-id {
   padding-top: 38px;
 }
@@ -995,8 +1096,8 @@ body {
 
   &-right-col {
     list-style-type: none;
-    margin-right: 150px;
-    margin-bottom: 150px;
+    margin-right: 263px;
+    margin-bottom: 159px;
   }
 
   &-adress {
@@ -1138,7 +1239,7 @@ body {
   }
   .js-main-slider {
     .slick-dots {
-      top: 500px;
+      top: 492px;
 
       li button {
         width: 50px;
@@ -1211,7 +1312,7 @@ body {
   }
   .js-main-slider {
     .slick-dots {
-      top: 335px;
+      top: 326px;
     }
 
     .slick-next:after {
@@ -1581,6 +1682,26 @@ body {
     }
   }
   /*section-advantages end*/
+  .footer {
+    &-container {
+      //width: 519px;
+    }
+    padding-top: 88px;
+
+    &-lab-logo {
+      margin-bottom: 100px;
+      margin-left: 65px;
+    }
+
+    &-right-col {
+      margin-bottom: 176px;
+      margin-right: 155px;
+    }
+    &-zoom-menu {
+      margin-left: 65px;
+    }
+
+  }
 }
 @media (max-width: 1023px) {
   .parallax {
@@ -1733,6 +1854,10 @@ body {
     &-hidden {
       display: none;
     }
+    &-img {
+      width: 40px;
+      height: 24px;
+    }
   }
   .parallax-header {
     z-index: 1500;
@@ -1746,8 +1871,11 @@ body {
   }
   .header {
     width: 728px;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .logo-wrapper {
+      width: 200px;
+    }
     &-wrapper {
       position: relative;
       padding: 0;
@@ -1812,7 +1940,7 @@ body {
   }
   .js-main-slider {
     .slick-dots {
-      top: 350px;
+      top: 452px;
       left: 250px;
       bottom: 0;
     }
@@ -2058,6 +2186,8 @@ body {
     display: block;
     width: 375px;
     margin: 0 auto;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
@@ -2076,6 +2206,8 @@ body {
     &-content {
       padding-bottom: 23px;
       border-bottom: 2px solid  #D5642A;
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 
@@ -2101,6 +2233,14 @@ body {
 
       a:hover {
         background: #D5642A;
+      }
+      a:active {
+        background: #D5642A;
+      }
+      a {
+        padding-top: 23px;
+        padding-bottom: 23px;
+        border-bottom:1px solid #AAAAAA;
       }
     }
   }
@@ -2148,6 +2288,7 @@ body {
 
       .title-main-smaller-font {
         margin-top: 50px;
+        margin-bottom: 15px;
         text-align: center;
       }
     }
@@ -2155,6 +2296,18 @@ body {
       display: flex;
       justify-content: center;
       width: 100%;
+
+      img {
+        width: 319px;
+      }
+    }
+    &-list li {
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      &:before {
+        left: 0;
+      }
     }
   }
   /*section-get end*/
@@ -2196,6 +2349,27 @@ body {
     }
   }
   /*section-advantages end */
+  
+  .footer {
+    &-container {
+      //width: 519px;
+    }
+    padding-top: 60px;
+
+    &-lab-logo {
+      margin-bottom: 111px;
+      margin-left: 35px;
+    }
+
+    &-right-col {
+      margin-bottom: 161px;
+      margin-right: 147px;
+    }
+    &-zoom-menu {
+      margin-left: 35px;
+    }
+
+  }
 }
 @media (max-width: 767px) {
   .parallax {
@@ -2233,17 +2407,25 @@ body {
     }
   }
   /*button-up-end*/
-
+  .burger {
+    &-img {
+      width: 20px;
+      height: 14px;
+    }
+  }
   .container {
     width: 355px;
   }
   .header {
     width: 375px;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
+    padding-top: 11px;
     padding-left: 5px;
     &-wrapper {
+      background-color: #fff;
       padding: 0;
       margin: 0 auto;
+      border-bottom: 1px solid #D4D4D4;
     }
     .logo-wrapper {
       width: 112px;
@@ -2290,7 +2472,7 @@ body {
   }
   .js-main-slider {
     .slick-dots {
-      top: 185px;
+      top: 330px;
       left: 70px;
       li {
         margin-right: 30px;
@@ -2685,22 +2867,54 @@ body {
 
   /*footer*/
   .footer {
+    padding-top: 46px;
+
     &-row {
       flex-direction: column;
     }
+    &-lab-logo {
+      margin-bottom: 46px;
+      margin-left: 0;
+    }
     &-right-col {
-      margin-top: 86px;
+      margin-top: 58px;
+      margin-right: 0;
+      margin-bottom: 87px;
     }
     &-about-container {
-      flex-direction: column;
+      flex-direction: column-reverse;
 
       text-align: center;
+    }
+    &-zoom-menu {
+      margin-left: 0;
     }
     &-about-text {
       margin-bottom: 12px;
     }
   }
-
+/**/
+  //.footer {
+  //  &-container {
+  //    //width: 519px;
+  //  }
+  //  padding-top: 60px;
+  //
+  //  &-lab-logo {
+  //    margin-bottom: 111px;
+  //    margin-left: 35px;
+  //  }
+  //
+  //  &-right-col {
+  //    margin-bottom: 161px;
+  //    margin-right: 147px;
+  //  }
+  //  &-zoom-menu {
+  //    margin-left: 35px;
+  //  }
+  //
+  //}
+  /**/
   /*footer end*/
 }
 

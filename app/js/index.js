@@ -82,9 +82,8 @@ const burgerMenuLens = document.querySelector('.link-lens-js');
 const burgerMenuMore = document.querySelector('.burger-menu-more-wrapper');
 const burgerMenuMain = document.querySelector('.burger-menu-main-wrapper');
 const burgerBack = document.querySelector('.button-back-js');
-const btnDropdown = document.querySelector('.btn-dropdown');
-const menuDropdown = document.querySelector('.tabs-main');
-const btnDropdownImg = document.querySelector('.btn-dropdown-img');
+
+
 //показ бургер меню
 btnBurger.addEventListener('click', () => {
     burgerMenuMore.classList.remove("burger-visible-block");
@@ -109,6 +108,9 @@ burgerBack.addEventListener('click', () => {
     burgerMenuMain.classList.remove("burger-hidden");
 });
 //
+const btnDropdown = document.querySelector('.btn-dropdown');
+const menuDropdown = document.querySelector('.tabs-main');
+const btnDropdownImg = document.querySelector('.btn-dropdown-img');
 btnDropdown.addEventListener('click', () => {
     menuDropdown.classList.toggle('dropdown-flex');
     btnDropdownImg.classList.toggle('btn-dropdown-img-up');
