@@ -762,6 +762,9 @@ body {
   margin: 0 auto;
   position: relative;
 }
+.zoom-men-small {
+  display: none;
+}
 .zoom-logo-for-men {
   position: absolute;
   top: 80px;
@@ -1013,10 +1016,17 @@ body {
     padding-bottom: 36px;
   }
 }
+.group-photo-small {
+  display: none;
+}
 .zoom-logo-line-wrapper {
   margin-top: 150px;
   margin-bottom: 55px;
 }
+.zoom-logo-line-small {
+  display: none;
+}
+
 /*section-cover end*/
 
 /*section-advantages*/
@@ -1705,9 +1715,8 @@ body {
 }
 @media (max-width: 1023px) {
   .parallax {
-    //min-height: 700px;
     &-body {
-      top: 55px;
+      top: 97px;
     }
   }
   .tabs-wrapper-header {
@@ -1881,6 +1890,8 @@ body {
       padding: 0;
       top: 0;
       transition: all 0.15s;
+      border-bottom: 1px solid #D4D4D4;
+      background-color: #ffffff;
     }
     &-navigation {
       margin-left: 0;
@@ -2233,9 +2244,15 @@ body {
 
       a:hover {
         background: #D5642A;
+        color: #fff;
       }
       a:active {
         background: #D5642A;
+        color: #fff;
+      }
+      a:focus {
+        background: #D5642A;
+        color: #fff;
       }
       a {
         padding-top: 23px;
@@ -2375,7 +2392,7 @@ body {
   .parallax {
     //min-height: 500px;
     &-body {
-      top: 47px;
+      top: 39px;
     }
   }
   .button-up {
@@ -2661,6 +2678,12 @@ body {
   .zoom-men-img-wrapper {
     width: 375px;
   }
+  .zoom-men {
+    display: none;
+  }
+  .zoom-men-small {
+    display: block;
+  }
   .zoom-logo-for-men {
     width: 80px;
     top: 26px;
@@ -2737,7 +2760,7 @@ body {
         width: 100%;
         margin-bottom: 29px;
         &-reader {
-          width: 100%;
+          width: 95%;
         }
       }
       &-right-col {
@@ -2790,14 +2813,21 @@ body {
     padding-top: 48px;
     padding-bottom: 48px;
 
-    &-left-col {
+    &-left-col img{
       width: 277px;
     }
     &-right-col {
       .title-main-smaller-font {
         font-size: 24px;
         line-height: 29px;
+        margin-top: 46px;
+        margin-bottom: 8px;
       }
+    }
+    &-list li {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 23px;
     }
   }
   /*section-get-end*/
@@ -2808,7 +2838,7 @@ body {
     &-title {
       font-size: 24px;
       line-height: 29px;
-
+      margin-left: 0;
       padding-bottom: 38px;
     }
     &-description {
@@ -2817,16 +2847,29 @@ body {
 
       padding-bottom: 15px;
     }
+    &-all-text {
+      margin-left: 0;
+    }
     &-row {
       width: 100%;
     }
-    .zoom-logo-line-wrapper {
-      margin-top: 40px;
-    }
   }
-  /*section-cover end*/
+  .group-photo-small {
+    display: block;
+  }
+  .group-photo {
+    display: none;
+  }
 
+  /*section-cover end*/
+.zoom-logo-line {
+  display: none;
+}
+  .zoom-logo-line-small {
+    display: block;
+  }
   .zoom-logo-line-wrapper {
+    margin-top: 67px;
     margin-bottom: 29px;
   }
   /*section-advantages*/
@@ -2877,7 +2920,7 @@ body {
       margin-left: 0;
     }
     &-right-col {
-      margin-top: 58px;
+      margin-top: 53px;
       margin-right: 0;
       margin-bottom: 87px;
     }
@@ -2890,31 +2933,13 @@ body {
       margin-left: 0;
     }
     &-about-text {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    &-about {
+      padding-top: 14px;
+      padding-bottom: 0;
     }
   }
-/**/
-  //.footer {
-  //  &-container {
-  //    //width: 519px;
-  //  }
-  //  padding-top: 60px;
-  //
-  //  &-lab-logo {
-  //    margin-bottom: 111px;
-  //    margin-left: 35px;
-  //  }
-  //
-  //  &-right-col {
-  //    margin-bottom: 161px;
-  //    margin-right: 147px;
-  //  }
-  //  &-zoom-menu {
-  //    margin-left: 35px;
-  //  }
-  //
-  //}
-  /**/
   /*footer end*/
 }
 
