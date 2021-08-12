@@ -4,26 +4,28 @@ $(document).ready(function () {
         dots: true
     });
 //слайдер с карточками
-    const slideNumbers = $('.section-about-card').length;
-    const slideWidth = $('.section-about-card').outerWidth();
-    const sliderWidth = $('.js-second-slider').outerWidth();
+//     const slideNumbers = $('.section-about-card').length;
+//     const slideWidth = $('.section-about-card').outerWidth();
+//     const sliderWidth = $('.js-second-slider').outerWidth();
+//
+//     $('.js-second-slider').slick({
+//         arrows: false,
+//         speed: 300,
+//         infinite: false,
+//         variableWidth: true
+//     }).on('wheel', (function(e) {
+//         const currentSlide = $('.js-second-slider').slick('slickCurrentSlide');
+//          if (e.originalEvent.deltaY < 0 && currentSlide !== 0) {
+//             e.preventDefault();
+//             $(this).slick('slickPrev');
+//         } else if (e.originalEvent.deltaY > 0 && ((slideNumbers - currentSlide) * slideWidth > sliderWidth)) {
+//
+//             e.preventDefault();
+//             $(this).slick('slickNext');
+//         }
+//     }));
 
-    $('.js-second-slider').slick({
-        arrows: false,
-        speed: 300,
-        infinite: false,
-        variableWidth: true
-    }).on('wheel', (function(e) {
-        const currentSlide = $('.js-second-slider').slick('slickCurrentSlide');
-         if (e.originalEvent.deltaY < 0 && currentSlide !== 0) {
-            e.preventDefault();
-            $(this).slick('slickPrev');
-        } else if (e.originalEvent.deltaY > 0 && ((slideNumbers - currentSlide) * slideWidth > sliderWidth)) {
 
-            e.preventDefault();
-            $(this).slick('slickNext');
-        }
-    }));
 //скролл наверх
     $('.to-up-js').click(function () {
         $('body, html').animate({
@@ -120,11 +122,64 @@ const header = document.querySelector('.header-wrapper');
 window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollPos > currentScrollPos) {
-        btnUp.style.bottom = "-200px";
         header.style.top = "0";
     } else {
-        btnUp.style.bottom = "10px";
         header.style.top = "-200px";
+    }
+    if (document.documentElement.clientWidth < 1023) {
+        if (prevScrollPos > currentScrollPos) {
+            btnUp.style.bottom = "-200px";
+            header.style.top = "0";
+        } else {
+            btnUp.style.bottom = "10px";
+            header.style.top = "-200px";
+        }
     }
     prevScrollPos = currentScrollPos;
 }
+
+window.addEventListener('load', function () {
+    gsap.registerPlugin(ScrollTrigger);
+    let sections = gsap.utils.toArray(".scroll__section");
+
+    gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".scroll",
+            pin: true,
+            scrub: true,
+            start: "top top",
+            end: "bottom",
+            // snap: 1 / (sections.length - 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: () => "+=" + document.querySelector(".scroll").offsetWidth
+        }
+    });
+    // let sections2 = gsap.utils.toArray(".scroll2__section");
+    //
+    // let s = document.querySelectorAll('.scroll2__section');
+    // console.log('Отступ слева: '+s[s.length-1].offsetLeft);
+    // console.log('Ширина последнего блока: '+s[s.length-1].offsetWidth);
+    // console.log('Ширина окна: '+window.innerWidth);
+    // let offset = s[s.length-1].offsetLeft,
+    //     width = s[s.length-1].offsetWidth,
+    //     windowWidth = window.innerWidth,
+    //     offsetX = width - (windowWidth - offset);
+    //
+    // gsap.to(sections2, {
+    //     x: -offsetX,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         trigger: ".scroll2",
+    //         pin: true,
+    //         scrub: true,
+    //         start: "top top",
+    //         end: "bottom",
+    //         markers: true,
+    //         // snap: 1 / (sections.length - 1),
+    //         // base vertical scrolling on how wide the container is so it feels more natural.
+    //         // end: () => "+=" + document.querySelector(".scroll").offsetWidth
+    //     }
+    // });
+});

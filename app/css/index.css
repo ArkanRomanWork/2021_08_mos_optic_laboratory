@@ -738,6 +738,14 @@ body {
   margin-top: -120px;
 }
 
+.slick-slide .slider-medium-image {
+  display: none;
+}
+
+.slick-slide .slider-small-image {
+  display: none;
+}
+
 .js-main-slider {
   position: relative;
 }
@@ -836,6 +844,13 @@ body {
   padding-top: 254px;
   padding-bottom: 254px;
 }
+.section-about-title {
+  display: none;
+}
+.section-about-container {
+  width: 1250px;
+  margin: 0 auto;
+}
 .section-about-card {
   position: relative;
   padding-right: 50px;
@@ -871,6 +886,22 @@ body {
 }
 
 /*section-about end*/
+.scroll__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  overflow: hidden;
+}
+.scroll__section {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
 .title {
   font-weight: bold;
   font-size: 16px;
@@ -939,7 +970,7 @@ body {
   width: 380px;
 }
 .section-production-images-third {
-  width: 103px;
+  width: 200px;
   padding-bottom: 20px;
 }
 .section-production-images-fourth {
@@ -1021,8 +1052,32 @@ body {
   display: flex;
   padding: 0;
 }
+.button-more-arrow-wrapper {
+  height: 56px;
+  width: 56px;
+  background-color: #F87C3C;
+  border-radius: 50%;
+}
+.button-more img {
+  height: 20px;
+  margin-top: 18px;
+}
 .button-more:hover {
   cursor: pointer;
+}
+.button-more:hover .button-more-arrow-wrapper {
+  background-color: #D5642A;
+}
+.button-more:hover .animation-roll-wrapper span {
+  color: #D5642A;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translateY(-108%);
+      -ms-transform: translateY(-108%);
+          transform: translateY(-108%);
 }
 .button-more.active-button img {
   -webkit-transform: rotate(180deg);
@@ -1586,7 +1641,7 @@ body {
 }
 
 .parallax {
-  min-height: 900px;
+  height: 100vh;
 }
 .parallax-header {
   position: fixed;
@@ -1643,11 +1698,15 @@ body {
     max-width: 1400px;
   }
   .main-section-container {
-    padding: 0 150px;
+    padding: 0 164px;
   }
   .main-section-header {
     font-size: 36px;
     line-height: 50px;
+  }
+
+  .section-about-container {
+    width: 696px;
   }
 }
 @media (max-width: 1400px) {
@@ -1655,9 +1714,6 @@ body {
     width: 944px;
   }
 
-  .parallax {
-    min-height: 596px;
-  }
   .parallax-body {
     top: 80px;
   }
@@ -1727,6 +1783,9 @@ body {
     padding-top: 150px;
     padding-bottom: 150px;
   }
+  .section-about-container {
+    width: 670px;
+  }
   .section-about-card {
     width: 340px;
     padding-right: 15px;
@@ -1772,12 +1831,38 @@ body {
     padding-top: 0;
     margin-top: -50px;
   }
-
+  .section-production-images-first {
+    width: 224px;
+    padding-left: 16px;
+    padding-bottom: 19px;
+  }
+  .section-production-images-second {
+    width: 304px;
+  }
+  .section-production-images-third {
+    width: 160px;
+    padding-bottom: 20px;
+  }
+  .section-production-images-fourth {
+    width: 225px;
+  }
+  .section-production-images-left-column {
+    padding-right: 16px;
+  }
   /*section-production end*/
   /*button-more*/
   .button-more-label {
     font-size: 16px;
     line-height: 19px;
+    padding-top: 10px;
+  }
+  .button-more-arrow-wrapper {
+    height: 35px;
+    width: 35px;
+  }
+  .button-more img {
+    height: 13px;
+    margin-top: 10px;
   }
 
   /*button-more end*/
@@ -1798,7 +1883,7 @@ body {
     padding-right: 50px;
   }
   .section-warranty-right-col {
-    width: 48%;
+    width: 50%;
   }
   .section-warranty-right-col-text {
     width: 100%;
@@ -1809,7 +1894,17 @@ body {
   }
   .section-warranty .zoom-logo {
     width: 72px;
-    right: 80px;
+    right: 125px;
+  }
+
+  .zoom-warranty-img {
+    width: 350px;
+  }
+
+  .zoom-card-img-wrapper {
+    margin-top: 44px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   /*section-warranty end*/
@@ -1831,12 +1926,18 @@ body {
     right: 60px;
   }
 
+  .section-right-col {
+    width: 65%;
+  }
   .section-footer {
     margin-top: 52px;
   }
   .section-footer .title-main-smaller-font {
     font-size: 32px;
     line-height: 38px;
+  }
+  .section-footer-right-col {
+    margin-left: 30px;
   }
   .section-container {
     width: 522px;
@@ -1895,6 +1996,9 @@ body {
     padding-top: 130px;
     padding-bottom: 120px;
   }
+  .section-get-left-col img {
+    width: 334px;
+  }
   .section-get .title-main-smaller-font {
     font-size: 28px;
     line-height: 34px;
@@ -1906,10 +2010,13 @@ body {
 
   /*section-get end */
   /*section-cover*/
+  .section-cover-title {
+    margin-left: 70px;
+  }
   .section-cover-all-text {
     font-size: 18px;
     line-height: 26px;
-    margin-left: 0;
+    margin-left: 40px;
   }
 
   .zoom-logo-line-wrapper {
@@ -1945,9 +2052,6 @@ body {
   /*section-advantages end*/
 }
 @media (max-width: 1023px) {
-  .parallax {
-    min-height: 700px;
-  }
   .parallax-body {
     top: 55px;
   }
@@ -2200,6 +2304,14 @@ body {
     width: 106px;
   }
 
+  .slick-slide .slider-large-image {
+    display: none;
+  }
+
+  .slick-slide .slider-medium-image {
+    display: block;
+  }
+
   .js-main-slider .slick-dots {
     top: 350px;
     left: 250px;
@@ -2210,6 +2322,9 @@ body {
   }
 
   /*section-about*/
+  .section-about-container {
+    width: 728px;
+  }
   .section-about-card {
     width: 487px;
     padding-right: 22px;
@@ -2242,6 +2357,37 @@ body {
             flex-direction: column;
     padding-top: 71px;
     padding-bottom: 150px;
+    /*
+        &-images {
+
+      &-first {
+        width: 224px;
+        padding-left: 16px;
+        padding-bottom: 19px;
+      }
+
+      &-second {
+        width: 304px;
+      }
+
+      &-third {
+        width: 160px;
+        padding-bottom: 20px;
+      }
+
+      &-fourth {
+        width: 225px;
+      }
+
+      &-left-column {
+        padding-right: 16px;
+      }
+
+      &-right-column {
+      }
+    }
+
+    */
   }
   .section-production .title-main {
     margin-right: 0;
@@ -2255,6 +2401,24 @@ body {
   }
   .section-production-images {
     width: 100%;
+  }
+  .section-production-images-first {
+    width: 282px;
+    padding-left: 16px;
+    padding-bottom: 25px;
+  }
+  .section-production-images-second {
+    width: 403px;
+  }
+  .section-production-images-third {
+    width: 213px;
+    padding-bottom: 28px;
+  }
+  .section-production-images-fourth {
+    width: 298px;
+  }
+  .section-production-images-left-column {
+    padding-right: 27px;
   }
   .section-production-images-right-column {
     -webkit-box-pack: start;
@@ -2288,6 +2452,20 @@ body {
   }
 
   /*section-production end*/
+  .button-more-label {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 18px;
+  }
+  .button-more-arrow-wrapper {
+    height: 56px;
+    width: 56px;
+  }
+  .button-more img {
+    height: 21px;
+    margin-top: 18px;
+  }
+
   /*section-warranty*/
   .section-warranty {
     padding-top: 81px;
@@ -2550,9 +2728,6 @@ body {
   /*section-advantages end */
 }
 @media (max-width: 767px) {
-  .parallax {
-    min-height: 500px;
-  }
   .parallax-body {
     top: 47px;
   }
@@ -2637,6 +2812,14 @@ body {
     padding-left: 10px;
   }
 
+  .slick-slide .slider-medium-image {
+    display: none;
+  }
+
+  .slick-slide .slider-small-image {
+    display: block;
+  }
+
   .js-main-slider .slick-dots {
     top: 185px;
     left: 70px;
@@ -2649,6 +2832,9 @@ body {
   .section-about {
     padding-top: 57px;
     padding-bottom: 78px;
+  }
+  .section-about-container {
+    width: 355px;
   }
   .section-about-card {
     width: 320px;
@@ -2722,7 +2908,7 @@ body {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
   }
   .section-production-images-right-column {
     display: -webkit-box;
@@ -2752,11 +2938,17 @@ body {
     padding-top: 10px;
     margin-right: 10px;
   }
-  .button-more-img {
-    width: 36px;
-    height: 36px;
+  .button-more-arrow-wrapper {
+    height: 35px;
+    width: 35px;
+  }
+  .button-more img {
+    height: 13px;
+    margin-top: 10px;
   }
 
+  /*
+  /*кнопка подробнее*/
   /*кнопка подробнее end*/
   /*section-warranty*/
   .zoom-warranty-img {
