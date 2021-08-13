@@ -2418,9 +2418,6 @@ body {
   }
 
   /*section-about*/
-  .section-about {
-    overflow: auto;
-  }
   .section-about-card {
     width: 487px;
     padding-right: 22px;
