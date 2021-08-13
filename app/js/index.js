@@ -119,17 +119,18 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 }
 
-window.addEventListener('load', function () {
+function initGsapSlider () {
+    let s = document.querySelectorAll('.scroll__section');
+    let offset = s[s.length-1].offsetLeft,
+      width = s[s.length-1].offsetWidth,
+      windowWidth = window.innerWidth,
+      containerWidth = document.querySelector('.container').offsetWidth,
+      sectionPaddingRight = parseInt(getComputedStyle(s[0]).paddingRight),
+      offsetX = width - (containerWidth - offset) - (windowWidth - containerWidth) / 2 - sectionPaddingRight;
+
     if (document.documentElement.clientWidth >= 1024) {
         gsap.registerPlugin(ScrollTrigger);
         let sections = gsap.utils.toArray(".scroll__section");
-        let s = document.querySelectorAll('.scroll__section');
-        let offset = s[s.length-1].offsetLeft,
-            width = s[s.length-1].offsetWidth,
-            windowWidth = window.innerWidth,
-            containerWidth = document.querySelector('.container').offsetWidth,
-          sectionPaddingRight = parseInt(getComputedStyle(s[0]).paddingRight),
-          offsetX = width - (containerWidth - offset) - (windowWidth - containerWidth) / 2 - sectionPaddingRight;
 
         gsap.to(sections, {
             x: -offsetX,
@@ -141,20 +142,16 @@ window.addEventListener('load', function () {
                 scrub: true,
                 start: "top top",
                 end: "bottom",
-                // end: () => "+=" + document.querySelector(".scroll").offsetWidth
             }
         });
-    }
-    if (document.documentElement.clientWidth <= 1023) {
+    } else {
         gsap.registerPlugin(Draggable);
-
         let slides = gsap.utils.toArray(".slide"),
             numSlides = slides.length,
-            progressPerItem = 1 / (numSlides - 1),
-            snapProgress = gsap.utils.snap(progressPerItem),
-            slideWidth, totalWidth, slideAnimation,
+            slideWidth = slides[0].offsetWidth, totalWidth = slideWidth * numSlides,
             animation = gsap.to(slides, {
-                xPercent: "-=" + ((numSlides - 1) * 100),
+                x: -offsetX,
+                // xPercent: "-=" + ((numSlides - 1) * 100),
                 duration: 1,
                 ease: "none",
                 paused: true
@@ -171,14 +168,7 @@ window.addEventListener('load', function () {
                 },
 
             });
-
-        function resize() {
-            slideWidth = slides[0].offsetWidth;
-            totalWidth = slideWidth * numSlides;
-        }
-
-        resize();
-
-        window.addEventListener("resize", resize);
     }
-});
+}
+
+window.addEventListener('load', initGsapSlider);
