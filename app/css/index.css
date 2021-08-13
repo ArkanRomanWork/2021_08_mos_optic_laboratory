@@ -713,7 +713,6 @@ body {
   color: #D5642A;
   width: 35%;
   margin-top: 50px;
-  margin-bottom: 140px;
 }
 .main-section-header {
   font-weight: 600;
@@ -841,15 +840,12 @@ body {
 
 /*section-about*/
 .section-about {
-  padding-top: 254px;
+  padding-top: 224px;
   padding-bottom: 254px;
+  overflow: hidden;
 }
 .section-about-title {
   display: none;
-}
-.section-about-container {
-  width: 1250px;
-  margin: 0 auto;
 }
 .section-about-card {
   position: relative;
@@ -894,7 +890,7 @@ body {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  overflow: hidden;
+  padding-top: 30px;
 }
 .scroll__section {
   -webkit-flex-shrink: 0;
@@ -1016,9 +1012,6 @@ body {
 .section-production-text-wrapper {
   padding-right: 50px;
 }
-.section-production-button-more-wrapper {
-  padding-top: 15px;
-}
 .section-production .title-main {
   margin-right: -106px;
 }
@@ -1106,7 +1099,7 @@ body {
 /*section-warranty*/
 .section-warranty {
   padding-top: 160px;
-  padding-bottom: 160px;
+  padding-bottom: 140px;
   background-color: #F3F3F3;
 }
 .section-warranty-container {
@@ -1131,12 +1124,12 @@ body {
 }
 .section-warranty-right-col {
   width: 50%;
+  padding-left: 10px;
 }
 .section-warranty-text-description {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 .section-warranty-right-col-text {
-  width: 95%;
   margin-top: 45px;
   margin-bottom: 45px;
 }
@@ -1164,7 +1157,7 @@ body {
 /*section-warranty end*/
 /*instance block*/
 .block-instance-wrapper {
-  padding: 50.5px 45px;
+  padding: 50px 45px;
   border: 1px solid #A0A0A0;
   position: relative;
 }
@@ -1268,10 +1261,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 100px;
-  margin-bottom: 78px;
+  margin-bottom: 50px;
 }
 .section-footer-left-col {
-  width: 50%;
+  width: 40%;
 }
 .section-footer-left-col-reader {
   width: 50%;
@@ -1311,7 +1304,6 @@ body {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  margin-top: 60px;
 }
 
 .btn-dropdown {
@@ -1401,11 +1393,14 @@ body {
   width: 50%;
 }
 .section-get-left-col {
-  width: 50%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-right: 120px;
 }
 .section-get-list {
   list-style-type: none;
-  margin-top: 38px;
+  margin-top: 31px;
 }
 .section-get-list li {
   font-weight: normal;
@@ -1414,15 +1409,15 @@ body {
   color: #3D3D3D;
   padding-bottom: 24px;
   margin-top: 24px;
-  padding-left: 50px;
+  padding-left: 52px;
   position: relative;
   border-bottom: 1px solid #A0A0A0;
 }
 .section-get-list li:before {
   content: url(../img/plus.svg);
   position: absolute;
-  top: 18px;
-  left: 12px;
+  top: 13px;
+  left: 1px;
 }
 .section-get-list :last-child {
   border: none;
@@ -1449,13 +1444,16 @@ body {
   font-size: 30px;
   line-height: 36px;
   color: #272B70;
+  width: 40%;
 }
 .section-cover-all-text {
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
   color: #3D3D3D;
-  margin-left: 245px;
+  width: 58%;
+  padding-right: 100px;
+  padding-left: 5px;
 }
 .section-cover-description {
   padding-bottom: 36px;
@@ -1466,8 +1464,8 @@ body {
 }
 
 .zoom-logo-line-wrapper {
-  margin-top: 150px;
-  margin-bottom: 55px;
+  margin-top: 125px;
+  margin-bottom: 40px;
 }
 
 .zoom-logo-line-small {
@@ -1688,7 +1686,7 @@ body {
   .button-partners {
     font-size: 10px;
     line-height: 12px;
-    padding: 12px 29px;
+    padding: 9px 28px;
     -webkit-box-shadow: -5px 5px #CACBD9;
             box-shadow: -5px 5px #CACBD9;
   }
@@ -1718,10 +1716,6 @@ body {
   .main-section-header {
     font-size: 36px;
     line-height: 50px;
-  }
-
-  .section-about-container {
-    width: 696px;
   }
 }
 @media (max-width: 1400px) {
@@ -1754,7 +1748,7 @@ body {
   }
 
   .js-main-slider .slick-dots {
-    top: 326px;
+    top: 332px;
   }
   .js-main-slider .slick-next:after {
     top: 100px;
@@ -1771,7 +1765,7 @@ body {
     line-height: 20px;
     width: 50%;
     padding-right: 50px;
-    margin-bottom: 69px;
+    margin-top: 66px;
   }
   .main-section-header {
     font-size: 30px;
@@ -1795,11 +1789,8 @@ body {
 
   /*section-about*/
   .section-about {
-    padding-top: 150px;
+    padding-top: 120px;
     padding-bottom: 150px;
-  }
-  .section-about-container {
-    width: 670px;
   }
   .section-about-card {
     width: 340px;
@@ -1844,7 +1835,6 @@ body {
   }
   .section-production-button-more-wrapper {
     padding-top: 0;
-    margin-top: -50px;
   }
   .section-production-images-first {
     width: 224px;
@@ -1866,10 +1856,19 @@ body {
   }
   /*section-production end*/
   /*button-more*/
+  .section-button-more-wrapper {
+    margin-top: 10px;
+  }
+
+  .button-more-wrapper {
+    padding-top: 30px;
+  }
+
   .button-more-label {
     font-size: 16px;
     line-height: 19px;
-    padding-top: 10px;
+    padding-top: 7px;
+    margin-right: 14px;
   }
   .button-more-arrow-wrapper {
     height: 35px;
@@ -1881,6 +1880,21 @@ body {
   }
 
   /*button-more end*/
+  .block-instance-wrapper {
+    padding: 40px 40px 56px;
+  }
+
+  .instance {
+    width: 38px;
+    height: 38px;
+    font-size: 30px;
+    line-height: 40px;
+    -webkit-box-shadow: 0 0 0 9px #f4dfd4;
+            box-shadow: 0 0 0 9px #f4dfd4;
+    top: -16px;
+    left: -19px;
+  }
+
   /*section-warranty*/
   .section-warranty {
     padding-top: 136px;
@@ -1898,10 +1912,12 @@ body {
     padding-right: 50px;
   }
   .section-warranty-right-col {
-    width: 50%;
+    width: 51%;
+    padding-left: 0;
   }
   .section-warranty-right-col-text {
     width: 100%;
+    margin-bottom: 22px;
   }
   .section-warranty-text-description-wrapper {
     width: 95%;
@@ -1918,8 +1934,8 @@ body {
 
   .zoom-card-img-wrapper {
     margin-top: 44px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 35px;
+    padding-bottom: 1px;
   }
 
   /*section-warranty end*/
@@ -1941,18 +1957,28 @@ body {
     right: 60px;
   }
 
+  .title-main-and-information {
+    padding-top: 5px;
+    margin-bottom: 57px;
+  }
+
   .section-right-col {
-    width: 65%;
+    width: 58%;
   }
   .section-footer {
-    margin-top: 52px;
+    margin-top: 47px;
+    margin-bottom: 0;
   }
   .section-footer .title-main-smaller-font {
     font-size: 32px;
     line-height: 38px;
   }
+  .section-footer-left-col {
+    width: 44%;
+  }
   .section-footer-right-col {
-    margin-left: 30px;
+    width: 49%;
+    margin-left: 0;
   }
   .section-container {
     width: 522px;
@@ -1964,9 +1990,10 @@ body {
   .section-container .text-description {
     font-size: 16px;
     line-height: 23px;
+    padding-bottom: 15px;
   }
   .section-main-wrapper {
-    padding-bottom: 69px;
+    padding-bottom: 60px;
   }
   .section-with-tabs .title-main-and-information .title-main {
     font-size: 32px;
@@ -1987,6 +2014,7 @@ body {
   }
   .section-left-col {
     padding-right: 10px;
+    width: 42%;
   }
   .section-img-wrapper {
     margin-bottom: 35px;
@@ -2011,31 +2039,54 @@ body {
     padding-top: 130px;
     padding-bottom: 120px;
   }
+  .section-get-left-col {
+    width: 49%;
+    padding-right: 0;
+  }
   .section-get-left-col img {
     width: 334px;
+  }
+  .section-get-right-col {
+    padding-top: 20px;
+    width: 45%;
   }
   .section-get .title-main-smaller-font {
     font-size: 28px;
     line-height: 34px;
   }
+  .section-get-list {
+    margin-top: 42px;
+  }
   .section-get-list li {
     font-size: 16px;
     line-height: 23px;
+    padding-bottom: 18px;
+    margin-top: 18px;
+  }
+  .section-get-list li:before {
+    top: 14px;
   }
 
   /*section-get end */
   /*section-cover*/
+  .section-cover {
+    padding-top: 90px;
+  }
   .section-cover-title {
-    margin-left: 70px;
+    margin-left: 43px;
   }
   .section-cover-all-text {
     font-size: 18px;
     line-height: 26px;
-    margin-left: 40px;
+    padding-right: 50px;
+    padding-left: 70px;
+  }
+  .section-cover-description {
+    padding-bottom: 25px;
   }
 
   .zoom-logo-line-wrapper {
-    margin-top: 45px;
+    margin-top: 58px;
     margin-bottom: 44px;
   }
 
@@ -2046,10 +2097,12 @@ body {
   /*section-cover end*/
   /*section-advantages*/
   .section-advantages {
-    padding-top: 335px;
+    padding-top: 305px;
+    padding-bottom: 43px;
   }
   .section-advantages-card {
     margin-right: 50px;
+    margin-bottom: 62px;
   }
   .section-advantages-card-header {
     font-size: 18px;
@@ -2065,6 +2118,10 @@ body {
   }
 
   /*section-advantages end*/
+  .section-advantages-card-wrapper {
+    margin-top: 110px;
+  }
+
   .footer {
     padding-top: 88px;
   }
@@ -2254,6 +2311,7 @@ body {
 
   .parallax-header {
     z-index: 1500;
+    height: 0;
   }
 
   .main-zoom-menu {
@@ -2267,8 +2325,8 @@ body {
 
   .header {
     width: 728px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
   .header .logo-wrapper {
     width: 200px;
@@ -2360,9 +2418,6 @@ body {
   }
 
   /*section-about*/
-  .section-about-container {
-    width: 728px;
-  }
   .section-about-card {
     width: 487px;
     padding-right: 22px;
@@ -2486,14 +2541,19 @@ body {
     margin-top: 30px;
   }
   .section-production-button-more-wrapper {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   /*section-production end*/
+  .button-more-wrapper {
+    padding-top: 0;
+  }
+
   .button-more-label {
     font-size: 20px;
     line-height: 24px;
     padding-top: 18px;
+    margin-right: 40px;
   }
   .button-more-arrow-wrapper {
     height: 56px;
@@ -2505,6 +2565,22 @@ body {
   }
 
   /*section-warranty*/
+  .block-instance-wrapper {
+    margin-left: 6px;
+    padding: 40px 45px;
+  }
+
+  .instance {
+    width: 48px;
+    height: 48px;
+    font-size: 35px;
+    line-height: 50px;
+    -webkit-box-shadow: 0 0 0 12px #f4dfd4;
+            box-shadow: 0 0 0 12px #f4dfd4;
+    top: -25px;
+    left: -25px;
+  }
+
   .section-warranty {
     padding-top: 81px;
     padding-bottom: 57px;
@@ -2514,10 +2590,11 @@ body {
     line-height: 36px;
   }
   .section-warranty-left-col {
-    width: 45%;
+    width: 47%;
+    padding-right: 38px;
   }
   .section-warranty-right-col {
-    width: 55%;
+    width: 53%;
   }
   .section-warranty-right-col-text {
     margin-top: 25px;
@@ -2550,7 +2627,7 @@ body {
     padding-bottom: 71px;
   }
   .section-main-wrapper .title-main-and-information {
-    margin-bottom: 46px;
+    margin-bottom: 20px;
   }
   .section-container {
     width: 628px;
@@ -2563,9 +2640,12 @@ body {
     font-size: 18px;
     line-height: 26px;
   }
+  .section-left-col, .section-right-col {
+    width: 50%;
+  }
   .section-footer {
     margin-bottom: 0;
-    margin-top: 21px;
+    margin-top: 30px;
   }
   .section-footer .title-main-smaller-font {
     font-size: 30px;
@@ -2575,8 +2655,12 @@ body {
     font-size: 18px;
     line-height: 26px;
   }
+  .section-footer-left-col {
+    width: 50%;
+  }
   .section-footer-right-col {
     margin-left: 17px;
+    width: 50%;
   }
   .section-left-col {
     padding-right: 20px;
@@ -2586,7 +2670,7 @@ body {
     line-height: 36px;
   }
   .section-with-tabs .section-button-more-wrapper {
-    margin-top: 0;
+    margin-top: 15px;
   }
   .section-zoom-logo {
     width: 65px;
@@ -2611,7 +2695,7 @@ body {
   .btn-dropdown-img {
     position: absolute;
     top: 25px;
-    right: 0;
+    right: 10px;
   }
   .btn-dropdown-img-up {
     -webkit-transform: rotate(180deg);
@@ -2634,8 +2718,8 @@ body {
   .tabs-wrapper {
     position: relative;
   }
-  .tabs-wrapper .active:after {
-    background-color: transparent;
+  .tabs-wrapper .active {
+    display: none;
   }
   .tabs-main {
     display: none;
@@ -2658,9 +2742,9 @@ body {
     color: #fff;
   }
   .tabs-main a {
-    padding-top: 23px;
-    padding-bottom: 23px;
+    padding: 26px 5px;
     border-bottom: 1px solid #AAAAAA;
+    font-size: 14px;
   }
 
   .tab-dropdown {
@@ -2705,7 +2789,7 @@ body {
   /*section-get*/
   .section-get {
     padding-top: 84px;
-    padding-bottom: 93px;
+    padding-bottom: 70px;
   }
   .section-get-container {
     width: 479px;
@@ -2726,6 +2810,7 @@ body {
   }
   .section-get-right-col {
     width: 100%;
+    padding-top: 0;
   }
   .section-get-right-col .title-main-smaller-font {
     margin-top: 50px;
@@ -2750,6 +2835,8 @@ body {
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
+    padding-bottom: 24px;
+    margin-top: 24px;
   }
   .section-get-list li:before {
     left: 0;
@@ -2768,6 +2855,13 @@ body {
   }
   .section-cover-title {
     padding-bottom: 50px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .section-cover-all-text {
+    margin-left: 0;
+    width: 100%;
+    padding: 0;
   }
   .section-cover-description {
     font-size: 24px;
@@ -2775,15 +2869,23 @@ body {
   }
 
   /*section-cover end*/
+  .zoom-logo-line-wrapper {
+    margin-bottom: 30px;
+  }
+
   /*section-advantages*/
   .section-advantages {
     padding-top: 307px;
+    padding-bottom: 75px;
     background-color: #F3F3F3;
   }
   .section-advantages .title-main {
     font-size: 30px;
     line-height: 36px;
     width: 60%;
+  }
+  .section-advantages-card-wrapper {
+    margin-top: 75px;
   }
   .section-advantages-card {
     margin-right: 15px;
@@ -2920,11 +3022,8 @@ body {
 
   /*section-about*/
   .section-about {
-    padding-top: 57px;
+    padding-top: 27px;
     padding-bottom: 78px;
-  }
-  .section-about-container {
-    width: 355px;
   }
   .section-about-card {
     width: 320px;
@@ -3083,8 +3182,8 @@ body {
   /*section-warranty end*/
   /*instance block*/
   .block-instance-wrapper {
-    padding: 33px 35px;
-    margin-left: 25px;
+    padding: 32px 35px;
+    margin-left: 21px;
   }
   .block-instance-text {
     font-weight: normal;
@@ -3093,17 +3192,20 @@ body {
   }
 
   .instance {
-    width: 42px;
-    height: 42px;
-    line-height: 40px;
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+    line-height: 28px;
     -webkit-box-shadow: 0 0 0 7px #F4DFD4;
             box-shadow: 0 0 0 7px #F4DFD4;
+    top: -14px;
+    left: -14px;
   }
 
   /*instance block end*/
   /*section-with-tabs*/
   .zoom-men-img-wrapper {
-    width: 375px;
+    width: 100%;
   }
 
   .zoom-men {
@@ -3215,6 +3317,7 @@ body {
   .section-footer .title-main-smaller-font {
     font-size: 18px;
     line-height: 22px;
+    max-width: 250px;
   }
   .section-button-more-wrapper {
     margin-top: 0;
@@ -3236,7 +3339,7 @@ body {
   /*section-get*/
   .section-get {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 22px;
   }
   .section-get-left-col img {
     width: 277px;
@@ -3244,13 +3347,18 @@ body {
   .section-get-right-col .title-main-smaller-font {
     font-size: 24px;
     line-height: 29px;
-    margin-top: 46px;
-    margin-bottom: 8px;
+    margin-top: 45px;
+    margin-bottom: 0;
+  }
+  .section-get-list {
+    margin-top: 32px;
   }
   .section-get-list li {
-    font-weight: normal;
     font-size: 16px;
     line-height: 23px;
+    padding-left: 40px;
+    padding-bottom: 26px;
+    margin-top: 26px;
   }
 
   /*section-get-end*/
@@ -3274,6 +3382,9 @@ body {
   }
   .section-cover-row {
     width: 100%;
+  }
+  .section-cover .zoom-logo-line-wrapper {
+    margin-top: 65px;
   }
 
   .group-photo-small {
@@ -3301,6 +3412,7 @@ body {
   /*section-advantages*/
   .section-advantages {
     padding-top: 285px;
+    padding-bottom: 50px;
   }
   .section-advantages .title {
     padding-bottom: 19px;
@@ -3375,12 +3487,11 @@ body {
   .footer-zoom-menu {
     margin-left: 0;
   }
+  .footer-about {
+    padding-bottom: 6px;
+  }
   .footer-about-text {
     margin-bottom: 14px;
-  }
-  .footer-about {
-    padding-top: 14px;
-    padding-bottom: 0;
   }
 
   /*footer end*/
