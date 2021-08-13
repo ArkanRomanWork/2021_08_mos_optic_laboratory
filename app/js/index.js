@@ -55,7 +55,12 @@ $(document).ready(function () {
 //функционал табов
     $('.tab-item').not(':first').hide();
     $('.tab').click(function() {
-        const dataIndex = $(this).data('index') || $(this).index();
+        let dataIndex = $(this).data('index') || $(this).index();
+        if ($(this).data('index') === 0) {
+            dataIndex = 0;
+        }
+        console.log('$(this).index()',$(this).index());
+        console.log('$(this).data(\'index\')',$(this).data('index'));
         $('.tab').removeClass('active');
         $('.tabs-main').find('.tab').eq(dataIndex).addClass('active');
         $('.btn-dropdown-content-js').text($(this).text());
@@ -142,30 +147,64 @@ window.onscroll = function() {
 }
 
 window.addEventListener('load', function () {
-    // if (document.documentElement.clientWidth < 1023) {
-    //     return;
-    // }
+    if (document.documentElement.clientWidth >= 1024) {
+        gsap.registerPlugin(ScrollTrigger);
+        let sections = gsap.utils.toArray(".scroll__section");
+        let s = document.querySelectorAll('.scroll__section');
+        let offset = s[s.length-1].offsetLeft,
+            width = s[s.length-1].offsetWidth,
+            windowWidth = window.innerWidth,
+            containerWidth = document.querySelector('.container').offsetWidth,
+            offsetX = width - (containerWidth - offset) - (windowWidth - containerWidth) / 2;
 
-    gsap.registerPlugin(ScrollTrigger);
-    let sections = gsap.utils.toArray(".scroll__section");
-    let s = document.querySelectorAll('.scroll__section');
-    let offset = s[s.length-1].offsetLeft,
-      width = s[s.length-1].offsetWidth,
-      windowWidth = window.innerWidth,
-      containerWidth = document.querySelector('.container').offsetWidth,
-      offsetX = width - (containerWidth - offset) - (windowWidth - containerWidth) / 2;
+        gsap.to(sections, {
+            x: -offsetX,
+            // xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".scroll",
+                pin: true,
+                scrub: true,
+                start: "top top",
+                end: "bottom",
+                // end: () => "+=" + document.querySelector(".scroll").offsetWidth
+            }
+        });
+    }
+    if (document.documentElement.clientWidth <= 1023) {
+        gsap.registerPlugin(Draggable);
 
-    gsap.to(sections, {
-        x: -offsetX,
-        // xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".scroll",
-            pin: true,
-            scrub: true,
-            start: "top top",
-            end: "bottom",
-            // end: () => "+=" + document.querySelector(".scroll").offsetWidth
+        let slides = gsap.utils.toArray(".slide"),
+            numSlides = slides.length,
+            progressPerItem = 1 / (numSlides - 1),
+            snapProgress = gsap.utils.snap(progressPerItem),
+            slideWidth, totalWidth, slideAnimation,
+            animation = gsap.to(slides, {
+                xPercent: "-=" + ((numSlides - 1) * 100),
+                duration: 1,
+                ease: "none",
+                paused: true
+            }),
+            draggable = new Draggable(document.createElement("div"), { // use a proxy element
+                trigger: ".slides-container",
+                onPress() {
+                    gsap.killTweensOf(animation);
+                    this.startProgress = animation.progress();
+                },
+                onDrag() {
+                    let change = (draggable.startX - draggable.x) / totalWidth;
+                    animation.progress(draggable.startProgress + change);
+                },
+
+            });
+
+        function resize() {
+            slideWidth = slides[0].offsetWidth;
+            totalWidth = slideWidth * numSlides;
         }
-    });
+
+        resize();
+
+        window.addEventListener("resize", resize);
+    }
 });
