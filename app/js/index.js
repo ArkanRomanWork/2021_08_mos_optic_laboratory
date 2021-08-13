@@ -55,12 +55,13 @@ $(document).ready(function () {
 //функционал табов
     $('.tab-item').not(':first').hide();
     $('.tab').click(function() {
+        const dataIndex = $(this).data('index') || $(this).index();
         $('.tab').removeClass('active');
-        $('.tabs-main').find('.tab').eq($(this).index()).addClass('active');
+        $('.tabs-main').find('.tab').eq(dataIndex).addClass('active');
         $('.btn-dropdown-content-js').text($(this).text());
         $('.tabs-main').removeClass('dropdown-flex');
         $('.btn-dropdown-img').removeClass('btn-dropdown-img-up');
-        $('.tab-item').hide().eq($(this).index()).fadeIn();
+        $('.tab-item').hide().eq(dataIndex).fadeIn();
     });
 });
 //кнопка подробнее
@@ -141,11 +142,22 @@ window.onscroll = function() {
 }
 
 window.addEventListener('load', function () {
+    // if (document.documentElement.clientWidth < 1023) {
+    //     return;
+    // }
+
     gsap.registerPlugin(ScrollTrigger);
     let sections = gsap.utils.toArray(".scroll__section");
+    let s = document.querySelectorAll('.scroll__section');
+    let offset = s[s.length-1].offsetLeft,
+      width = s[s.length-1].offsetWidth,
+      windowWidth = window.innerWidth,
+      containerWidth = document.querySelector('.container').offsetWidth,
+      offsetX = width - (containerWidth - offset) - (windowWidth - containerWidth) / 2;
 
     gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
+        x: -offsetX,
+        // xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
             trigger: ".scroll",
@@ -153,35 +165,7 @@ window.addEventListener('load', function () {
             scrub: true,
             start: "top top",
             end: "bottom",
-            // snap: 1 / (sections.length - 1),
-            // base vertical scrolling on how wide the container is so it feels more natural.
-            end: () => "+=" + document.querySelector(".scroll").offsetWidth
+            // end: () => "+=" + document.querySelector(".scroll").offsetWidth
         }
     });
-    // let sections2 = gsap.utils.toArray(".scroll2__section");
-    //
-    // let s = document.querySelectorAll('.scroll2__section');
-    // console.log('Отступ слева: '+s[s.length-1].offsetLeft);
-    // console.log('Ширина последнего блока: '+s[s.length-1].offsetWidth);
-    // console.log('Ширина окна: '+window.innerWidth);
-    // let offset = s[s.length-1].offsetLeft,
-    //     width = s[s.length-1].offsetWidth,
-    //     windowWidth = window.innerWidth,
-    //     offsetX = width - (windowWidth - offset);
-    //
-    // gsap.to(sections2, {
-    //     x: -offsetX,
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: ".scroll2",
-    //         pin: true,
-    //         scrub: true,
-    //         start: "top top",
-    //         end: "bottom",
-    //         markers: true,
-    //         // snap: 1 / (sections.length - 1),
-    //         // base vertical scrolling on how wide the container is so it feels more natural.
-    //         // end: () => "+=" + document.querySelector(".scroll").offsetWidth
-    //     }
-    // });
 });

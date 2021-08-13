@@ -138,9 +138,9 @@ body {
   margin: 0 auto;
   position: relative;
 
-&-container {
-  padding: 0 340px;
-}
+  &-container {
+    padding: 0 340px;
+  }
   &-box {
     position: relative;
   }
@@ -163,7 +163,6 @@ body {
     color: #D5642A;
     width: 35%;
     margin-top: 50px;
-    margin-bottom: 140px;
   }
 
   &-header {
@@ -307,14 +306,12 @@ body {
 
 /*section-about*/
 .section-about {
-  padding-top: 254px;
+  padding-top: 224px;
   padding-bottom: 254px;
+  overflow: hidden;
+
   &-title {
     display: none;
-  }
-  &-container {
-    width: 1250px;
-    margin: 0 auto;
   }
 
   &-card {
@@ -370,7 +367,7 @@ body {
   &__wrapper {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    padding-top: 30px;
   }
 
   &__section {
@@ -577,10 +574,6 @@ body {
     }
   }
 
-  &-button-more-wrapper {
-    padding-top: 15px;
-  }
-
   .title-main {
     margin-right: -106px;
   }
@@ -665,7 +658,7 @@ body {
 /*section-warranty*/
 .section-warranty {
   padding-top: 160px;
-  padding-bottom: 160px;
+  padding-bottom: 140px;
   background-color: #F3F3F3;
 
   &-container {
@@ -688,14 +681,15 @@ body {
 
   &-right-col {
     width: 50%;
+    padding-left: 10px;
   }
 
   &-text-description {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
 
   &-right-col-text {
-    width: 95%;
+    //width: 95%;
     margin-top: 45px;
     margin-bottom: 45px;
   }
@@ -724,7 +718,7 @@ body {
 /*instance block*/
 .block-instance {
   &-wrapper {
-    padding: 50.5px 45px;
+    padding: 50px 45px;
     border: 1px solid #A0A0A0;
     position: relative;
   }
@@ -823,10 +817,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    margin-bottom: 78px;
+    margin-bottom: 50px;
 
     &-left-col {
-      width: 50%;
+      width: 40%;
 
       &-reader {
         width: 50%;
@@ -865,7 +859,6 @@ body {
   &-button-more-wrapper {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 60px;
   }
 }
 
@@ -954,12 +947,13 @@ body {
   }
 
   &-left-col {
-    width: 50%;
+    flex-shrink: 0;
+    padding-right: 120px;
   }
 
   &-list {
     list-style-type: none;
-    margin-top: 38px;
+    margin-top: 31px;
 
     li {
       font-weight: normal;
@@ -968,15 +962,15 @@ body {
       color: #3D3D3D;
       padding-bottom: 24px;
       margin-top: 24px;
-      padding-left: 50px;
+      padding-left: 52px;
       position: relative;
       border-bottom: 1px solid #A0A0A0;
 
       &:before {
         content: url(../img/plus.svg);
         position: absolute;
-        top: 18px;
-        left: 12px;
+        top: 13px;
+        left: 1px;
       }
     }
 
@@ -1002,6 +996,7 @@ body {
     font-size: 30px;
     line-height: 36px;
     color: #272B70;
+    width: 40%;
   }
 
   &-all-text {
@@ -1009,7 +1004,9 @@ body {
     font-size: 24px;
     line-height: 34px;
     color: #3D3D3D;
-    margin-left: 245px;
+    width: 58%;
+    padding-right: 100px;
+    padding-left: 5px;
   }
 
   &-description {
@@ -1020,8 +1017,8 @@ body {
   display: none;
 }
 .zoom-logo-line-wrapper {
-  margin-top: 150px;
-  margin-bottom: 55px;
+  margin-top: 125px;
+  margin-bottom: 40px;
 }
 .zoom-logo-line-small {
   display: none;
@@ -1244,7 +1241,7 @@ body {
   .button-partners {
     font-size: 10px;
     line-height: 12px;
-    padding: 12px 29px;
+    padding: 9px 28px;
     box-shadow: -5px 5px #CACBD9;
   }
   .js-main-slider {
@@ -1279,12 +1276,6 @@ body {
     &-header {
       font-size: 36px;
       line-height: 50px;
-    }
-  }
-
-  .section-about {
-    &-container {
-      width: 696px;
     }
   }
 }
@@ -1322,7 +1313,7 @@ body {
   }
   .js-main-slider {
     .slick-dots {
-      top: 326px;
+      top: 332px;
     }
 
     .slick-next:after {
@@ -1335,15 +1326,13 @@ body {
   }
   .main-section {
     max-width: 1024px;
-    &-container {
-    }
 
     &-description {
       font-size: 14px;
       line-height: 20px;
       width: 50%;
       padding-right: 50px;
-      margin-bottom: 69px;
+      margin-top: 66px;
     }
 
     &-header {
@@ -1370,12 +1359,9 @@ body {
   }
   /*section-about*/
   .section-about {
-    padding-top: 150px;
+    padding-top: 120px;
     padding-bottom: 150px;
 
-    &-container {
-      width: 670px;
-    }
     &-card {
       width: 340px;
       padding-right: 15px;
@@ -1425,7 +1411,6 @@ body {
 
     &-button-more-wrapper {
       padding-top: 0;
-      margin-top: -50px;
     }
 
     &-images {
@@ -1460,11 +1445,18 @@ body {
   }
   /*section-production end*/
   /*button-more*/
+  .section-button-more-wrapper {
+    margin-top: 10px;
+  }
+  .button-more-wrapper {
+    padding-top: 30px;
+  }
   .button-more {
     &-label {
       font-size: 16px;
       line-height: 19px;
-      padding-top: 10px;
+      padding-top: 7px;
+      margin-right: 14px;
     }
     &-arrow-wrapper {
       height: 35px;
@@ -1476,6 +1468,18 @@ body {
     }
   }
   /*button-more end*/
+  .block-instance-wrapper {
+    padding: 40px 40px 56px;
+  }
+  .instance {
+    width: 38px;
+    height: 38px;
+    font-size: 30px;
+    line-height: 40px;
+    box-shadow: 0 0 0 9px #f4dfd4;
+    top: -16px;
+    left: -19px;
+  }
   /*section-warranty*/
   .section-warranty {
     padding-top: 136px;
@@ -1498,9 +1502,11 @@ body {
     }
 
     &-right-col {
-      width: 50%;
+      width: 51%;
+      padding-left: 0;
       &-text {
         width: 100%;
+        margin-bottom: 22px;
       }
     }
 
@@ -1519,8 +1525,8 @@ body {
   }
   .zoom-card-img-wrapper {
     margin-top: 44px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 35px;
+    padding-bottom: 1px;
 
   }
   /*section-warranty end*/
@@ -1545,19 +1551,29 @@ body {
     right: 60px;
   }
 
+  .title-main-and-information {
+    padding-top: 5px;
+    margin-bottom: 57px;
+  }
+
   .section {
     &-right-col {
-      width: 65%;
+      width: 58%;
     }
     &-footer {
-      margin-top: 52px;
+      margin-top: 47px;
+      margin-bottom: 0;
 
       .title-main-smaller-font {
         font-size: 32px;
         line-height: 38px;
       }
+      &-left-col {
+        width: 44%;
+      }
       &-right-col {
-        margin-left: 30px;
+        width: 49%;
+        margin-left: 0;
       }
     }
 
@@ -1572,10 +1588,11 @@ body {
       .text-description {
         font-size: 16px;
         line-height: 23px;
+        padding-bottom: 15px;
       }
     }
     &-main-wrapper {
-      padding-bottom: 69px;
+      padding-bottom: 60px;
     }
 
     &-with-tabs {
@@ -1604,6 +1621,7 @@ body {
 
     &-left-col {
       padding-right: 10px;
+      width: 42%;
     }
 
     &-img-wrapper {
@@ -1633,8 +1651,18 @@ body {
     padding-top: 130px;
     padding-bottom: 120px;
 
-    &-left-col img{
-      width: 334px;
+    &-left-col {
+      width: 49%;
+      padding-right: 0;
+
+      img{
+        width: 334px;
+      }
+    }
+
+    &-right-col {
+      padding-top: 20px;
+      width: 45%;
     }
 
     .title-main-smaller-font {
@@ -1642,27 +1670,44 @@ body {
       line-height: 34px;
     }
 
+    &-list {
+      margin-top: 42px;
+    }
+
     &-list li {
       font-size: 16px;
       line-height: 23px;
+      padding-bottom: 18px;
+      margin-top: 18px;
+
+      &:before {
+        top: 14px;
+      }
     }
   }
   /*section-get end */
 
   /*section-cover*/
   .section-cover {
+    padding-top: 90px;
+
     &-title {
-      margin-left: 70px;
+      margin-left: 43px;
     }
     &-all-text {
       font-size: 18px;
       line-height: 26px;
-      margin-left: 40px;
+      padding-right: 50px;
+      padding-left: 70px;
+    }
+
+    &-description {
+      padding-bottom: 25px;
     }
   }
 
   .zoom-logo-line-wrapper {
-    margin-top: 45px;
+    margin-top: 58px;
     margin-bottom: 44px;
   }
 
@@ -1673,9 +1718,12 @@ body {
 
   /*section-advantages*/
   .section-advantages {
-    padding-top: 335px;
+    padding-top: 305px;
+    padding-bottom: 43px;
+
     &-card {
       margin-right: 50px;
+      margin-bottom: 62px;
 
       &-header {
         font-size: 18px;
@@ -1692,6 +1740,11 @@ body {
     }
   }
   /*section-advantages end*/
+
+  .section-advantages-card-wrapper {
+    margin-top: 110px;
+  }
+
   .footer {
     &-container {
       //width: 519px;
@@ -1870,6 +1923,7 @@ body {
   }
   .parallax-header {
     z-index: 1500;
+    height: 0;
   }
   .main-zoom-menu {
     display: none;
@@ -1880,8 +1934,8 @@ body {
   }
   .header {
     width: 728px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     .logo-wrapper {
       width: 200px;
     }
@@ -1962,9 +2016,8 @@ body {
 
   /*section-about*/
   .section-about {
-    &-container {
-      width: 728px;
-    }
+    overflow: auto;
+
     &-card {
       width: 487px;
       padding-right: 22px;
@@ -2076,16 +2129,20 @@ body {
       }
     }
     &-button-more-wrapper {
-      margin-top: 20px;
+      margin-top: 0;
     }
   }
   /*section-production end*/
 
+  .button-more-wrapper {
+    padding-top: 0;
+  }
   .button-more {
     &-label {
       font-size: 20px;
       line-height: 24px;
       padding-top: 18px;
+      margin-right: 40px;
     }
     &-arrow-wrapper {
       height: 56px;
@@ -2098,6 +2155,21 @@ body {
   }
 
   /*section-warranty*/
+  .block-instance-wrapper {
+    margin-left: 6px;
+    padding: 40px 45px;
+  }
+
+  .instance {
+    width: 48px;
+    height: 48px;
+    font-size: 35px;
+    line-height: 50px;
+    box-shadow: 0 0 0 12px #f4dfd4;
+    top: -25px;
+    left: -25px;
+  }
+
   .section-warranty {
     padding-top: 81px;
     padding-bottom: 57px;
@@ -2108,10 +2180,11 @@ body {
       }
     }
     &-left-col {
-      width: 45%;
+      width: 47%;
+      padding-right: 38px;
     }
     &-right-col {
-      width: 55%;
+      width: 53%;
       &-text {
         margin-top: 25px;
         margin-bottom: 49px;
@@ -2142,7 +2215,7 @@ body {
       padding-top: 56px;
       padding-bottom: 71px;
       .title-main-and-information {
-        margin-bottom: 46px;
+        margin-bottom: 20px;
       }
     }
     &-container {
@@ -2157,9 +2230,13 @@ body {
         line-height: 26px;
       }
     }
+    &-left-col,
+    &-right-col {
+      width: 50%;
+    }
     &-footer {
       margin-bottom: 0;
-      margin-top: 21px;
+      margin-top: 30px;
       .title-main-smaller-font {
         font-size: 30px;
         line-height: 36px;
@@ -2168,8 +2245,12 @@ body {
         font-size: 18px;
         line-height: 26px;
       }
+      &-left-col {
+        width: 50%;
+      }
       &-right-col {
         margin-left: 17px;
+        width: 50%;
       }
     }
     &-left-col {
@@ -2184,7 +2265,7 @@ body {
         }
       }
       .section-button-more-wrapper {
-        margin-top: 0;
+        margin-top: 15px;
       }
     }
     &-zoom-logo {
@@ -2209,7 +2290,7 @@ body {
     &-img {
       position: absolute;
       top: 25px;
-      right: 0;
+      right: 10px;
       &-up {
         transform: rotate(180deg);
       }
@@ -2230,8 +2311,8 @@ body {
     &-wrapper {
       position: relative;
 
-      .active:after {
-        background-color: transparent;
+      .active {
+        display: none;
       }
     }
     &-main {
@@ -2255,9 +2336,9 @@ body {
         color: #fff;
       }
       a {
-        padding-top: 23px;
-        padding-bottom: 23px;
+        padding: 26px 5px;
         border-bottom:1px solid #AAAAAA;
+        font-size: 14px;
       }
     }
   }
@@ -2292,7 +2373,7 @@ body {
   /*section-get*/
   .section-get {
     padding-top: 84px;
-    padding-bottom: 93px;
+    padding-bottom: 70px;
     &-container {
       width: 479px;
       margin: 0 auto;
@@ -2302,6 +2383,7 @@ body {
     }
     &-right-col {
       width: 100%;
+      padding-top: 0;
 
       .title-main-smaller-font {
         margin-top: 50px;
@@ -2322,6 +2404,9 @@ body {
       font-weight: normal;
       font-size: 20px;
       line-height: 28px;
+      padding-bottom: 24px;
+      margin-top: 24px;
+
       &:before {
         left: 0;
       }
@@ -2338,6 +2423,13 @@ body {
     }
     &-title {
       padding-bottom: 50px;
+      margin-left: 0;
+      width: 100%;
+    }
+    &-all-text {
+      margin-left: 0;
+      width: 100%;
+      padding: 0;
     }
     &-description {
       font-size: 24px;
@@ -2346,9 +2438,14 @@ body {
   }
   /*section-cover end*/
 
+  .zoom-logo-line-wrapper {
+    margin-bottom: 30px;
+  }
+
   /*section-advantages*/
   .section-advantages {
     padding-top: 307px;
+    padding-bottom: 75px;
     background-color: #F3F3F3;
 
     .title-main {
@@ -2356,6 +2453,9 @@ body {
       line-height: 36px;
 
       width: 60%;
+    }
+    &-card-wrapper {
+      margin-top: 75px;
     }
     &-card {
       margin-right: 15px;
@@ -2499,12 +2599,9 @@ body {
 
   /*section-about*/
   .section-about {
-    padding-top: 57px;
+    padding-top: 27px;
     padding-bottom: 78px;
 
-    &-container {
-      width: 355px;
-    }
     &-card {
       width: 320px;
 
@@ -2655,8 +2752,8 @@ body {
   /*instance block*/
   .block-instance {
     &-wrapper {
-      padding: 33px 35px;
-      margin-left: 25px;
+      padding: 32px 35px;
+      margin-left: 21px;
     }
     &-text {
       font-weight: normal;
@@ -2665,18 +2762,19 @@ body {
     }
   }
   .instance {
-    width: 42px;
-    height: 42px;
-
-    line-height: 40px;
-
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+    line-height: 28px;
     box-shadow: 0 0 0 7px #F4DFD4;
+    top: -14px;
+    left: -14px;
   }
 
   /*instance block end*/
   /*section-with-tabs*/
   .zoom-men-img-wrapper {
-    width: 375px;
+    width: 100%;
   }
   .zoom-men {
     display: none;
@@ -2782,6 +2880,7 @@ body {
       .title-main-smaller-font {
         font-size: 18px;
         line-height: 22px;
+        max-width: 250px;
       }
     }
     &-button-more-wrapper {
@@ -2811,7 +2910,7 @@ body {
   /*section-get*/
   .section-get {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 22px;
 
     &-left-col img{
       width: 277px;
@@ -2820,14 +2919,20 @@ body {
       .title-main-smaller-font {
         font-size: 24px;
         line-height: 29px;
-        margin-top: 46px;
-        margin-bottom: 8px;
+        margin-top: 45px;
+        margin-bottom: 0;
       }
     }
-    &-list li {
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 23px;
+    &-list {
+      margin-top: 32px;
+
+      li {
+        font-size: 16px;
+        line-height: 23px;
+        padding-left: 40px;
+        padding-bottom: 26px;
+        margin-top: 26px;
+      }
     }
   }
   /*section-get-end*/
@@ -2853,6 +2958,9 @@ body {
     &-row {
       width: 100%;
     }
+    .zoom-logo-line-wrapper {
+      margin-top: 65px;
+    }
   }
   .group-photo-small {
     display: block;
@@ -2862,9 +2970,9 @@ body {
   }
 
   /*section-cover end*/
-.zoom-logo-line {
-  display: none;
-}
+  .zoom-logo-line {
+    display: none;
+  }
   .zoom-logo-line-small {
     display: block;
   }
@@ -2875,6 +2983,7 @@ body {
   /*section-advantages*/
   .section-advantages {
     padding-top: 285px;
+    padding-bottom: 50px;
     .title {
       padding-bottom: 19px;
     }
@@ -2932,12 +3041,11 @@ body {
     &-zoom-menu {
       margin-left: 0;
     }
+    &-about {
+      padding-bottom: 6px;
+    }
     &-about-text {
       margin-bottom: 14px;
-    }
-    &-about {
-      padding-top: 14px;
-      padding-bottom: 0;
     }
   }
   /*footer end*/
