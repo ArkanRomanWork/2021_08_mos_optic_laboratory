@@ -155,7 +155,8 @@ window.addEventListener('load', function () {
             width = s[s.length-1].offsetWidth,
             windowWidth = window.innerWidth,
             containerWidth = document.querySelector('.container').offsetWidth,
-            offsetX = width - (containerWidth - offset) - (windowWidth - containerWidth) / 2;
+          sectionPaddingRight = parseInt(getComputedStyle(s[0]).paddingRight),
+          offsetX = width - (containerWidth - offset) - (windowWidth - containerWidth) / 2 - sectionPaddingRight;
 
         gsap.to(sections, {
             x: -offsetX,

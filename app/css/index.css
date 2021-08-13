@@ -849,8 +849,7 @@ body {
 }
 .section-about-card {
   position: relative;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 100px;
   width: 600px;
 }
 .section-about-card-header1 {
@@ -943,11 +942,13 @@ body {
   background-color: #ECECEC;
 }
 .section-production-title {
-  float: left;
-  width: 42%;
+  width: 50%;
 }
 .section-production .title-main {
   margin-bottom: 50px;
+}
+.section-production-container {
+  position: relative;
 }
 .section-production-images {
   display: -webkit-box;
@@ -956,20 +957,21 @@ body {
   display: flex;
 }
 .section-production-images-wrap {
-  float: right;
-  width: 58%;
+  position: absolute;
+  top: -14px;
+  right: 0;
 }
 .section-production-images-first {
-  width: 280px;
+  width: 300px;
   padding-left: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 23px;
 }
 .section-production-images-second {
   width: 380px;
 }
 .section-production-images-third {
   width: 200px;
-  padding-bottom: 20px;
+  padding-bottom: 26px;
 }
 .section-production-images-fourth {
   width: 280px;
@@ -1006,14 +1008,12 @@ body {
           justify-content: flex-end;
 }
 .section-production-text {
-  padding-top: 57px;
+  padding-top: 7px;
   padding-bottom: 24px;
 }
 .section-production-text-wrapper {
-  padding-right: 50px;
-}
-.section-production .title-main {
-  margin-right: -106px;
+  width: 34%;
+  padding-bottom: 20px;
 }
 .section-production-more-information-wrapper {
   display: -webkit-box;
@@ -1033,8 +1033,8 @@ body {
 }
 
 /**/
-#section-production-id {
-  padding-top: 38px;
+.section-production-id {
+  padding: 38px 0;
 }
 
 /*section-production end*/
@@ -1131,7 +1131,7 @@ body {
 }
 .section-warranty-right-col-text {
   margin-top: 45px;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 .section-warranty-text-description-wrapper {
   margin-top: 84px;
@@ -1794,8 +1794,7 @@ body {
   }
   .section-about-card {
     width: 340px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 30px;
   }
   .section-about-card-header2 {
     font-size: 36px;
@@ -1828,21 +1827,32 @@ body {
   .section-production .title-main {
     font-size: 28px;
     line-height: 34px;
-    margin-right: -45px;
+    margin-bottom: 40px;
+  }
+  .section-production-title {
+    width: 46%;
   }
   .section-production-text {
-    padding-top: 41px;
+    padding-top: 0;
   }
   .section-production-button-more-wrapper {
     padding-top: 0;
   }
+  .section-production-button-more-wrapper .button-more-wrapper {
+    padding-top: 20px;
+  }
+  .section-production-images-wrap {
+    top: 0;
+  }
   .section-production-images-first {
-    width: 224px;
+    width: 240px;
+    height: 267px;
     padding-left: 16px;
     padding-bottom: 19px;
   }
   .section-production-images-second {
     width: 304px;
+    height: 212px;
   }
   .section-production-images-third {
     width: 160px;
@@ -1850,6 +1860,7 @@ body {
   }
   .section-production-images-fourth {
     width: 225px;
+    height: 386px;
   }
   .section-production-images-left-column {
     padding-right: 16px;
@@ -1925,7 +1936,8 @@ body {
   }
   .section-warranty .zoom-logo {
     width: 72px;
-    right: 125px;
+    right: 120px;
+    top: 35px;
   }
 
   .zoom-warranty-img {
@@ -2420,8 +2432,7 @@ body {
   /*section-about*/
   .section-about-card {
     width: 487px;
-    padding-right: 22px;
-    padding-left: 22px;
+    padding-right: 44px;
   }
   .section-about-card-header2 {
     font-size: 68px;
@@ -2450,40 +2461,14 @@ body {
             flex-direction: column;
     padding-top: 71px;
     padding-bottom: 150px;
-    /*
-        &-images {
-
-      &-first {
-        width: 224px;
-        padding-left: 16px;
-        padding-bottom: 19px;
-      }
-
-      &-second {
-        width: 304px;
-      }
-
-      &-third {
-        width: 160px;
-        padding-bottom: 20px;
-      }
-
-      &-fourth {
-        width: 225px;
-      }
-
-      &-left-column {
-        padding-right: 16px;
-      }
-
-      &-right-column {
-      }
-    }
-
-    */
   }
   .section-production .title-main {
     margin-right: 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .section-production-title {
+    width: 65%;
   }
   .section-production-container {
     -webkit-box-orient: vertical;
@@ -2495,23 +2480,32 @@ body {
   .section-production-images {
     width: 100%;
   }
+  .section-production-images-wrap {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
   .section-production-images-first {
-    width: 282px;
+    width: 298px;
+    height: auto;
     padding-left: 16px;
     padding-bottom: 25px;
   }
   .section-production-images-second {
     width: 403px;
+    height: auto;
   }
   .section-production-images-third {
     width: 213px;
     padding-bottom: 28px;
+    height: auto;
   }
   .section-production-images-fourth {
     width: 298px;
+    height: auto;
   }
   .section-production-images-left-column {
-    padding-right: 27px;
+    padding-right: 26px;
   }
   .section-production-images-right-column {
     -webkit-box-pack: start;
@@ -2519,8 +2513,13 @@ body {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .section-production-content {
+  .section-production-text-wrapper {
     width: 100%;
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+  .section-production-button-more-wrapper .button-more-wrapper {
+    padding-top: 0;
   }
   .section-production-more-information-wrapper {
     -webkit-box-orient: vertical;
@@ -2574,11 +2573,11 @@ body {
     width: 48px;
     height: 48px;
     font-size: 35px;
-    line-height: 50px;
+    line-height: 46px;
     -webkit-box-shadow: 0 0 0 12px #f4dfd4;
             box-shadow: 0 0 0 12px #f4dfd4;
-    top: -25px;
-    left: -25px;
+    top: -22px;
+    left: -24px;
   }
 
   .section-warranty {
@@ -2602,14 +2601,17 @@ body {
   }
   .section-warranty-text-description-wrapper {
     width: 100%;
+    margin-top: 40px;
   }
   .section-warranty .zoom-logo {
     width: 62px;
     top: 30px;
+    right: 68px;
   }
 
   .zoom-card-img-wrapper {
     margin-top: 45px;
+    padding: 28px 40px 12px 48px;
   }
 
   /*section-warranty end*/
@@ -3027,8 +3029,7 @@ body {
   }
   .section-about-card {
     width: 320px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 20px;
   }
   .section-about-card-header1 {
     font-size: 18px;
@@ -3058,12 +3059,24 @@ body {
     padding-top: 42px;
     padding-bottom: 55px;
   }
+  .section-production .title {
+    padding-bottom: 18px;
+  }
+  .section-production-title {
+    width: 86%;
+  }
   .section-production-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .section-production-text-wrapper {
+    padding-top: 30px;
+  }
+  .section-production-text {
+    padding-bottom: 16px;
   }
   .section-production-images {
     width: 100%;
@@ -3078,7 +3091,7 @@ body {
   }
   .section-production-images-third {
     width: 172px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
   .section-production-images-fourth {
     width: 172px;
@@ -3117,6 +3130,7 @@ body {
   .section-production .title-main {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 17px;
   }
 
   /*section-production end*/
@@ -3145,11 +3159,17 @@ body {
   }
   .zoom-warranty-img-mobile {
     display: block;
+    margin-top: 23px;
+  }
+
+  .zoom-card-img-wrapper {
+    margin-top: 30px;
+    padding: 37px 10px 26px;
   }
 
   .section-warranty {
     padding-top: 65px;
-    padding-bottom: 52px;
+    padding-bottom: 37px;
   }
   .section-warranty-container {
     -webkit-box-orient: vertical;
@@ -3169,7 +3189,14 @@ body {
   }
   .section-warranty-right-col {
     width: 100%;
-    padding-bottom: 15px;
+    padding-bottom: 0;
+  }
+  .section-warranty-right-col-text {
+    margin-top: 38px;
+    margin-bottom: 19px;
+  }
+  .section-warranty-text-description-wrapper {
+    margin-top: 30px;
   }
   .section-warranty .title {
     padding-bottom: 14px;

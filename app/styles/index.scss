@@ -316,8 +316,7 @@ body {
 
   &-card {
     position: relative;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 100px;
     width: 600px;
 
     &-header1 {
@@ -511,15 +510,14 @@ body {
   background-color: #ECECEC;
 
   &-title {
-    float: left;
-    width: 42%;
+    width: 50%;
   }
   .title-main {
     margin-bottom: 50px;
   }
-  //&-container {
-  //  display: flex;
-  //}
+  &-container {
+    position: relative;
+  }
 
   //&-content {
   //  width: 41%;
@@ -529,13 +527,14 @@ body {
     display: flex;
     //width: 59%;
     &-wrap {
-      float: right;
-      width: 58%;
+      position: absolute;
+      top: -14px;
+      right: 0;
     }
     &-first {
-      width: 280px;
+      width: 300px;
       padding-left: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 23px;
     }
 
     &-second {
@@ -544,7 +543,7 @@ body {
 
     &-third {
       width: 200px;
-      padding-bottom: 20px;
+      padding-bottom: 26px;
     }
 
     &-fourth {
@@ -566,16 +565,13 @@ body {
   }
 
   &-text {
-    padding-top: 57px;
+    padding-top: 7px;
     padding-bottom: 24px;
 
     &-wrapper {
-      padding-right: 50px;
+      width: 34%;
+      padding-bottom: 20px;
     }
-  }
-
-  .title-main {
-    margin-right: -106px;
   }
 
   &-more-information {
@@ -600,8 +596,8 @@ body {
 }
 
 /**/
-#section-production-id {
-  padding-top: 38px;
+.section-production-id {
+  padding: 38px 0;
 }
 /*section-production end*/
 
@@ -689,9 +685,8 @@ body {
   }
 
   &-right-col-text {
-    //width: 95%;
     margin-top: 45px;
-    margin-bottom: 45px;
+    margin-bottom: 55px;
   }
 
   &-text-description-wrapper {
@@ -1364,8 +1359,7 @@ body {
 
     &-card {
       width: 340px;
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 30px;
 
       &-header2 {
         font-size: 36px;
@@ -1401,28 +1395,40 @@ body {
       &-main {
         font-size: 28px;
         line-height: 34px;
-
-        margin-right: -45px;
+        margin-bottom: 40px;
       }
     }
+
+    &-title {
+      width: 46%;
+    }
+
     &-text {
-      padding-top: 41px;
+      padding-top: 0;
     }
 
     &-button-more-wrapper {
       padding-top: 0;
+
+      .button-more-wrapper {
+        padding-top: 20px;
+      }
     }
 
     &-images {
-
+      &-wrap {
+        top: 0;
+      }
       &-first {
-        width: 224px;
+        width: 240px;
+        height: 267px;
         padding-left: 16px;
         padding-bottom: 19px;
       }
 
       &-second {
         width: 304px;
+        height: 212px;
       }
 
       &-third {
@@ -1432,6 +1438,7 @@ body {
 
       &-fourth {
         width: 225px;
+        height: 386px;
       }
 
       &-left-column {
@@ -1517,7 +1524,8 @@ body {
 
     .zoom-logo {
       width: 72px;
-      right: 125px;
+      right: 120px;
+      top: 35px;
     }
   }
   .zoom-warranty-img {
@@ -2018,8 +2026,7 @@ body {
   .section-about {
     &-card {
       width: 487px;
-      padding-right: 22px;
-      padding-left: 22px;
+      padding-right: 44px;
 
       &-header2 {
         font-size: 68px;
@@ -2045,70 +2052,63 @@ body {
     padding-bottom: 150px;
     .title-main {
       margin-right: 0;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    &-title {
+      width: 65%;
     }
     &-container {
       flex-direction: column;
     }
     &-images {
       width: 100%;
+      &-wrap {
+        position: relative;
+        top: 0;
+        right: 0;
+      }
       &-first {
-        width: 282px;
+        width: 298px;
+        height: auto;
         padding-left: 16px;
         padding-bottom: 25px;
       }
       &-second {
         width: 403px;
+        height: auto;
       }
       &-third {
         width: 213px;
         padding-bottom: 28px;
+        height: auto;
       }
 
       &-fourth {
         width: 298px;
+        height: auto;
       }
       &-left-column {
-        padding-right: 27px;
+        padding-right: 26px;
 
       }
       &-right-column {
         justify-content: flex-start;
       }
     }
-    /*
-        &-images {
 
-      &-first {
-        width: 224px;
-        padding-left: 16px;
-        padding-bottom: 19px;
-      }
-
-      &-second {
-        width: 304px;
-      }
-
-      &-third {
-        width: 160px;
-        padding-bottom: 20px;
-      }
-
-      &-fourth {
-        width: 225px;
-      }
-
-      &-left-column {
-        padding-right: 16px;
-      }
-
-      &-right-column {
-      }
-    }
-
-    */
-    &-content {
+    &-text-wrapper {
       width: 100%;
+      padding-top: 55px;
+      padding-bottom: 0;
     }
+
+    &-button-more-wrapper {
+      .button-more-wrapper {
+        padding-top: 0;
+      }
+    }
+
     &-more-information {
       &-wrapper{
         flex-direction: column;
@@ -2162,10 +2162,10 @@ body {
     width: 48px;
     height: 48px;
     font-size: 35px;
-    line-height: 50px;
+    line-height: 46px;
     box-shadow: 0 0 0 12px #f4dfd4;
-    top: -25px;
-    left: -25px;
+    top: -22px;
+    left: -24px;
   }
 
   .section-warranty {
@@ -2190,14 +2190,17 @@ body {
     }
     &-text-description-wrapper {
       width: 100%;
+      margin-top: 40px;
     }
     .zoom-logo {
       width: 62px;
       top: 30px;
+      right: 68px;
     }
   }
   .zoom-card-img-wrapper {
     margin-top: 45px;
+    padding: 28px 40px 12px 48px;
   }
   /*section-warranty end*/
 
@@ -2602,9 +2605,7 @@ body {
 
     &-card {
       width: 320px;
-
-      padding-right: 10px;
-      padding-left: 10px;
+      padding-right: 20px;
 
       &-header1 {
         font-size: 18px;
@@ -2635,8 +2636,20 @@ body {
     padding-top: 42px;
     padding-bottom: 55px;
 
+    .title {
+      padding-bottom: 18px;
+    }
+    &-title {
+      width: 86%;
+    }
     &-container {
       flex-direction: column;
+    }
+    &-text-wrapper {
+      padding-top: 30px;
+    }
+    &-text {
+      padding-bottom: 16px;
     }
     &-images {
       width: 100%;
@@ -2651,7 +2664,7 @@ body {
       }
       &-third {
         width: 172px;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
       }
       &-fourth {
         width: 172px;
@@ -2674,6 +2687,7 @@ body {
     .title-main {
       font-size: 18px;
       line-height: 22px;
+      margin-bottom: 17px;
     }
 
   }
@@ -2712,12 +2726,19 @@ body {
       display: none;
       &-mobile {
         display: block;
+        margin-top: 23px;
       }
+    }
+  }
+  .zoom-card-img {
+    &-wrapper {
+      margin-top: 30px;
+      padding: 37px 10px 26px;
     }
   }
   .section-warranty {
     padding-top: 65px;
-    padding-bottom: 52px;
+    padding-bottom: 37px;
 
     &-container {
       flex-direction: column-reverse;
@@ -2734,8 +2755,14 @@ body {
     }
     &-right-col {
       width: 100%;
-
-      padding-bottom: 15px;
+      padding-bottom: 0;
+    }
+    &-right-col-text {
+      margin-top: 38px;
+      margin-bottom: 19px;
+    }
+    &-text-description-wrapper {
+      margin-top: 30px;
     }
     .title {
       padding-bottom: 14px;
