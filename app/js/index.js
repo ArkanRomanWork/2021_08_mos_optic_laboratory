@@ -1,11 +1,10 @@
 $(document).ready(function () {
-    //первый слайдер
+    //first slider
     $('.js-main-slider').slick({
         dots: true
     });
-//слайдер с карточками
+    //card-slider
     if (document.documentElement.clientWidth <= 1023) {
-        console.log('document.documentElement.clientWidth',document.documentElement.clientWidth);
         $('.js-second-slider').slick({
             dots: false,
             arrows: false,
@@ -15,16 +14,15 @@ $(document).ready(function () {
             slidesToScroll: 1,
         })
     }
-
-//скролл наверх
+    //scroll to up
     $('.to-up-js').click(function () {
         $('body, html').animate({
             scrollTop: 0
         }, 1000);
     });
 
-//видимость кнопки наеверх
-    $(window).scroll(function() {
+    //visibility button up
+    $(window).on('scroll', function() {
         if ($(this).scrollTop()>200) {
             $('.button-up-wrapper-js').fadeIn();
         }
@@ -32,7 +30,7 @@ $(document).ready(function () {
             $('.button-up-wrapper-js').fadeOut();
         }
     });
-    //скрол ссылки
+    //link scroll
     $('.link-navigation').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
@@ -41,8 +39,7 @@ $(document).ready(function () {
         $('.burger-wrapper-js').removeClass("burger-visible");
 
     });
-
-//функционал табов
+    //tab menu
     $('.tab-item').not(':first').hide();
     $('.tab').click(function() {
         let dataIndex = $(this).data('index') || $(this).index();
@@ -56,8 +53,7 @@ $(document).ready(function () {
         $('.btn-dropdown-img').removeClass('btn-dropdown-img-up');
         $('.tab-item').hide().eq(dataIndex).fadeIn();
     });
-
-    //кнопка подробнее
+    //button more
     $(".button-more").click(function(){
         const dataButton = this.getAttribute('data-content');
         $(`[data-content-id = "${dataButton}"]`).slideToggle("slow",() =>
@@ -66,7 +62,6 @@ $(document).ready(function () {
         });
     });
 });
-
 const btnBurger = document.querySelector('.burger-button-js');
 const burgerMenuBox = document.querySelector('.burger-wrapper-js');
 const burgerOverlay = document.querySelector('.burger-overlay-js');
@@ -75,31 +70,29 @@ const burgerMenuLens = document.querySelector('.link-lens-js');
 const burgerMenuMore = document.querySelector('.burger-menu-more-wrapper');
 const burgerMenuMain = document.querySelector('.burger-menu-main-wrapper');
 const burgerBack = document.querySelector('.button-back-js');
-
-//показ бургер меню
+//show burger menu
 btnBurger.addEventListener('click', () => {
     burgerMenuMore.classList.remove("burger-visible-block");
     burgerMenuMain.classList.remove("burger-hidden");
     burgerMenuBox.classList.add("burger-visible");
 });
-//закрытие бургер меню
+//close burger menu
 burgerOverlay.addEventListener('click', () => {
     burgerMenuBox.classList.remove("burger-visible");
 });
 burgerClose.addEventListener('click', () => {
     burgerMenuBox.classList.remove("burger-visible");
 });
-//скрытое меню в бургере
+//hide menu in burger
 burgerMenuLens.addEventListener('click', () => {
     burgerMenuMore.classList.add("burger-visible-block");
     burgerMenuMain.classList.add("burger-hidden");
 });
-//бургер кнопка назад
+//button back in burger
 burgerBack.addEventListener('click', () => {
     burgerMenuMore.classList.remove("burger-visible-block");
     burgerMenuMain.classList.remove("burger-hidden");
 });
-//
 const btnDropdown = document.querySelector('.btn-dropdown');
 const menuDropdown = document.querySelector('.tabs-main');
 const btnDropdownImg = document.querySelector('.btn-dropdown-img');
@@ -107,28 +100,25 @@ btnDropdown.addEventListener('click', () => {
     menuDropdown.classList.toggle('dropdown-flex');
     btnDropdownImg.classList.toggle('btn-dropdown-img-up');
 });
-
-//появление и скрытие меню и кнопки вверх при скроле вверх/вниз
+//show and hide button to up, when scroll up/down
 let prevScrollPos = window.pageYOffset;
 const btnUp = document.querySelector('.button-up-wrapper-js');
 const header = document.querySelector('.header-wrapper');
-
 window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
     if (document.documentElement.clientWidth < 1023) {
         if (currentScrollPos <= 600) {
-            header.style.top = "0";//пок
+            header.style.top = "0";
         } else if (prevScrollPos > currentScrollPos) {
-            btnUp.style.bottom = "-200px";//хов
-            header.style.top = "0";//пок
+            btnUp.style.bottom = "-200px";
+            header.style.top = "0";
         } else {
-            btnUp.style.bottom = "10px";//пок
-            header.style.top = "-200px";//хов
+            btnUp.style.bottom = "10px";
+            header.style.top = "-200px";
         }
     }
     prevScrollPos = currentScrollPos;
 }
-
 function initGsapSlider () {
     let s = document.querySelectorAll('.scroll__section');
     let offset = s[s.length-1].offsetLeft,
@@ -141,10 +131,8 @@ function initGsapSlider () {
     if (document.documentElement.clientWidth >= 1024) {
         gsap.registerPlugin(ScrollTrigger);
         let sections = gsap.utils.toArray(".scroll__section");
-
         gsap.to(sections, {
             x: -offsetX,
-            // xPercent: -100 * (sections.length - 1),
             ease: "none",
             scrollTrigger: {
                 trigger: ".scroll",
