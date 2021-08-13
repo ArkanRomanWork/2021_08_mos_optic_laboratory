@@ -3,27 +3,7 @@ $(document).ready(function () {
     $('.js-main-slider').slick({
         dots: true
     });
-//слайдер с карточками
-//     const slideNumbers = $('.section-about-card').length;
-//     const slideWidth = $('.section-about-card').outerWidth();
-//     const sliderWidth = $('.js-second-slider').outerWidth();
-//
-//     $('.js-second-slider').slick({
-//         arrows: false,
-//         speed: 300,
-//         infinite: false,
-//         variableWidth: true
-//     }).on('wheel', (function(e) {
-//         const currentSlide = $('.js-second-slider').slick('slickCurrentSlide');
-//          if (e.originalEvent.deltaY < 0 && currentSlide !== 0) {
-//             e.preventDefault();
-//             $(this).slick('slickPrev');
-//         } else if (e.originalEvent.deltaY > 0 && ((slideNumbers - currentSlide) * slideWidth > sliderWidth)) {
-//
-//             e.preventDefault();
-//             $(this).slick('slickNext');
-//         }
-//     }));
+
 
 
 //скролл наверх
@@ -59,8 +39,6 @@ $(document).ready(function () {
         if ($(this).data('index') === 0) {
             dataIndex = 0;
         }
-        console.log('$(this).index()',$(this).index());
-        console.log('$(this).data(\'index\')',$(this).data('index'));
         $('.tab').removeClass('active');
         $('.tabs-main').find('.tab').eq(dataIndex).addClass('active');
         $('.btn-dropdown-content-js').text($(this).text());
@@ -68,15 +46,14 @@ $(document).ready(function () {
         $('.btn-dropdown-img').removeClass('btn-dropdown-img-up');
         $('.tab-item').hide().eq(dataIndex).fadeIn();
     });
-});
-//кнопка подробнее
-const buttonMore = document.querySelectorAll('.button-more');
-buttonMore.forEach((oneButton) => {
-    oneButton.addEventListener('click', function()  {
-        this.classList.toggle('active-button')
+
+    //кнопка подробнее
+    $(".button-more").click(function(){
         const dataButton = this.getAttribute('data-content');
-        const blockContent = document.querySelector(`[data-content-id = "${dataButton}"]`);
-        blockContent.classList.toggle("visible");
+        $(`[data-content-id = "${dataButton}"]`).slideToggle("slow",() =>
+        {
+            this.classList.toggle('active-button');
+        });
     });
 });
 
@@ -88,7 +65,6 @@ const burgerMenuLens = document.querySelector('.link-lens-js');
 const burgerMenuMore = document.querySelector('.burger-menu-more-wrapper');
 const burgerMenuMain = document.querySelector('.burger-menu-main-wrapper');
 const burgerBack = document.querySelector('.button-back-js');
-
 
 //показ бургер меню
 btnBurger.addEventListener('click', () => {
@@ -129,18 +105,15 @@ const header = document.querySelector('.header-wrapper');
 
 window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-        header.style.top = "0";
-    } else {
-        header.style.top = "-200px";
-    }
     if (document.documentElement.clientWidth < 1023) {
-        if (prevScrollPos > currentScrollPos) {
-            btnUp.style.bottom = "-200px";
-            header.style.top = "0";
+        if (currentScrollPos <= 600) {
+            header.style.top = "0";//пок
+        } else if (prevScrollPos > currentScrollPos) {
+            btnUp.style.bottom = "-200px";//хов
+            header.style.top = "0";//пок
         } else {
-            btnUp.style.bottom = "10px";
-            header.style.top = "-200px";
+            btnUp.style.bottom = "10px";//пок
+            header.style.top = "-200px";//хов
         }
     }
     prevScrollPos = currentScrollPos;

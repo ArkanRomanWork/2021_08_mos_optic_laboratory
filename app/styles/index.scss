@@ -306,8 +306,6 @@ body {
 
 /*section-about*/
 .section-about {
-  padding-top: 224px;
-  padding-bottom: 254px;
   overflow: hidden;
 
   &-title {
@@ -351,22 +349,17 @@ body {
   }
 }
 /*section-about end*/
-//.scroll2 {
-//  display: flex;
-//
-//  flex-wrap: nowrap;
-//  overflow: hidden;
-//  &__section {
-//    flex-shrink: 0;
-//  }
-//}
+
 
 .scroll {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
 
   &__wrapper {
     display: flex;
     flex-wrap: nowrap;
-    padding-top: 30px;
   }
 
   &__section {
@@ -413,96 +406,6 @@ body {
   }
 }
 
-/*section-production*/
-//.section-production {
-//  padding-top: 180px;
-//  padding-bottom: 130px;
-//  background-color: #ECECEC;
-//
-//  &-container {
-//    display: flex;
-//  }
-//
-//  &-content {
-//    width: 41%;
-//  }
-//
-//  &-images {
-//    display: flex;
-//    width: 59%;
-//
-//    &-first {
-//      width: 280px;
-//      padding-left: 20px;
-//      padding-bottom: 20px;
-//    }
-//
-//    &-second {
-//      width: 380px;
-//    }
-//
-//    &-third {
-//      width: 200px;
-//      padding-bottom: 20px;
-//    }
-//
-//    &-fourth {
-//      width: 280px;
-//    }
-//
-//    &-left-column {
-//      display: flex;
-//      flex-direction: column;
-//      align-items: flex-end;
-//      padding-right: 20px;
-//    }
-//
-//    &-right-column {
-//      display: flex;
-//      flex-direction: column;
-//      justify-content: flex-end;
-//    }
-//  }
-//
-//  &-text {
-//    padding-top: 57px;
-//    padding-bottom: 24px;
-//
-//    &-wrapper {
-//      padding-right: 50px;
-//    }
-//  }
-//
-//  &-button-more-wrapper {
-//    padding-top: 15px;
-//  }
-//
-//  .title-main {
-//    margin-right: -106px;
-//  }
-//
-//  &-more-information {
-//
-//    &-wrapper{
-//      display: flex;
-//    }
-//
-//    &-left-col {
-//      width: 50%;
-//    }
-//
-//    &-right-col {
-//      width: 50%;
-//      padding-left: 40px;
-//    }
-//
-//    &-img {
-//      margin-top: 30px;
-//    }
-//  }
-//}
-
-
 /**/
 .section-production {
   padding-top: 180px;
@@ -519,13 +422,8 @@ body {
     position: relative;
   }
 
-  //&-content {
-  //  width: 41%;
-  //}
-
   &-images {
     display: flex;
-    //width: 59%;
     &-wrap {
       position: absolute;
       top: -14px;
@@ -578,6 +476,7 @@ body {
 
     &-wrapper{
       display: flex;
+
     }
 
     &-left-col {
@@ -1280,8 +1179,6 @@ body {
   }
 
   .parallax {
-    //min-height: 596px;
-
     &-body {
       top: 80px;
     }
@@ -1354,8 +1251,6 @@ body {
   }
   /*section-about*/
   .section-about {
-    padding-top: 120px;
-    padding-bottom: 150px;
 
     &-card {
       width: 340px;
@@ -1755,7 +1650,6 @@ body {
 
   .footer {
     &-container {
-      //width: 519px;
     }
     padding-top: 88px;
 
@@ -2024,6 +1918,8 @@ body {
 
   /*section-about*/
   .section-about {
+    padding-top: 100px;
+    padding-bottom: 100px;
     &-card {
       width: 487px;
       padding-right: 44px;
@@ -2043,7 +1939,10 @@ body {
     }
   }
   /*section-about end*/
+  .scroll {
+    height: auto;
 
+  }
   /*section-production*/
   .section-production {
     display: flex;
@@ -2470,7 +2369,6 @@ body {
   
   .footer {
     &-container {
-      //width: 519px;
     }
     padding-top: 60px;
 
@@ -2600,8 +2498,8 @@ body {
 
   /*section-about*/
   .section-about {
-    padding-top: 27px;
-    padding-bottom: 78px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     &-card {
       width: 320px;
