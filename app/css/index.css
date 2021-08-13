@@ -2432,6 +2432,10 @@ body {
     content: "";
   }
 
+  .js-second-slider {
+    overflow: visible;
+  }
+
   /*section-about*/
   .section-about {
     padding-top: 100px;
@@ -2457,8 +2461,11 @@ body {
   /*section-about end*/
   .scroll {
     height: auto;
+    display: block;
   }
-
+  .scroll__wrapper {
+    display: block;
+  }
   /*section-production*/
   .section-production {
     display: -webkit-box;

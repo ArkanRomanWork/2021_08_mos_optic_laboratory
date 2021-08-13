@@ -3,8 +3,18 @@ $(document).ready(function () {
     $('.js-main-slider').slick({
         dots: true
     });
-
-
+//слайдер с карточками
+    if (document.documentElement.clientWidth <= 1023) {
+        console.log('document.documentElement.clientWidth',document.documentElement.clientWidth);
+        $('.js-second-slider').slick({
+            dots: false,
+            arrows: false,
+            speed: 300,
+            infinite: false,
+            variableWidth: true,
+            slidesToScroll: 1,
+        })
+    }
 
 //скролл наверх
     $('.to-up-js').click(function () {
@@ -144,30 +154,6 @@ function initGsapSlider () {
                 end: "bottom",
             }
         });
-    } else {
-        gsap.registerPlugin(Draggable);
-        let slides = gsap.utils.toArray(".slide"),
-            numSlides = slides.length,
-            slideWidth = slides[0].offsetWidth, totalWidth = slideWidth * numSlides,
-            animation = gsap.to(slides, {
-                x: -offsetX,
-                // xPercent: "-=" + ((numSlides - 1) * 100),
-                duration: 1,
-                ease: "none",
-                paused: true
-            }),
-            draggable = new Draggable(document.createElement("div"), { // use a proxy element
-                trigger: ".slides-container",
-                onPress() {
-                    gsap.killTweensOf(animation);
-                    this.startProgress = animation.progress();
-                },
-                onDrag() {
-                    let change = (draggable.startX - draggable.x) / totalWidth;
-                    animation.progress(draggable.startProgress + change);
-                },
-
-            });
     }
 }
 
